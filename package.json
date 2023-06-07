@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "type": "module",
   "description": "",
-  "main": "packages/index.ts",
+  "main": "./lib/es/index.js",
   "scripts": {
     "build": "vite build"
   },
@@ -15,10 +15,10 @@
   },
   "exports": {
     ".": {
-      "import": "./lib/es/index.ts",
+      "import": "./lib/es/index.js",
       "require": "./lib/cjs/index.cjs"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./lib/es/style.css"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
@@ -27,6 +27,7 @@
     "@vitejs/plugin-vue": "^4.1.0",
     "eslint": "8.0.0",
     "eslint-plugin-vue": "^9.14.1",
+    "sass": "^1.62.1",
     "typescript": "^5.0.2",
     "vite": "4.0.0",
     "vite-plugin-dts": "^2.3.0",

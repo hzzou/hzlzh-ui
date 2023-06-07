@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="basicButton">
         <div>按钮组件测试</div>
         <slot></slot>
     </div>
@@ -11,6 +11,10 @@ const props = defineProps({
 
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .basicButton{
+        background: #ff0;
+        width: 100px;
+        height: 100px;
+    }
 </style>

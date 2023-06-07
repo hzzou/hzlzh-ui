@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "hzlzh-ui": "workspace:^1.0.0"
+  "devDependencies": {
+    "hzlzh-ui": "workspace:^1.0.1"
   }
 }
