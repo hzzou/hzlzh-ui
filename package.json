@@ -1,0 +1,45 @@
+{
+  "name": "hzlzh-ui",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "packages/index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/es/index.ts",
+      "require": "./lib/cjs/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "8.0.0",
+    "eslint-plugin-vue": "^9.14.1",
+    "typescript": "^5.0.2",
+    "vite": "4.0.0",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^1.4.2"
+  },
+  "workspaces": [
+    "packages/*",
+    "cli",
+    "docs",
+    "example"
+  ],
+  "keywords": [],
+  "author": "hzlzh",
+  "license": "ISC"
+}

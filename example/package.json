@@ -1,0 +1,14 @@
+{
+  "name": "@hzlzh-ui/example",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "hzlzh-ui": "workspace:^1.0.0"
+  }
+}
