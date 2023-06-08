@@ -14,7 +14,5 @@ const props = defineProps({
 <style scoped lang="scss">
     .basicButton{
         background: #ff0;
-        width: 100px;
-        height: 100px;
     }
 </style>

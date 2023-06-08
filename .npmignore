@@ -22,10 +22,12 @@ dist-ssr
 *.sln
 *.sw?
 
+docs
+example
 .editorconfig
 .eslintrc.json
-.pnpm-lock.yaml
-.pnpm-workspace.yaml
+pnpm-lock.yaml
+pnpm-workspace.yaml
 tsconfig.json
 tsconfig.node.json
 packages

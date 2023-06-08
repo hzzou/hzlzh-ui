@@ -20,13 +20,13 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		vueSetupExtend(),
-		dts({
-			"outputDir":[
-				path.resolve(__dirname+"/lib/es"),
-				path.resolve(__dirname+"/lib/cjs"),
-			],
-			"cleanVueFileName": true
-		})
+		// dts({
+		// 	"outputDir":[
+		// 		path.resolve(__dirname+"/lib/es"),
+		// 		path.resolve(__dirname+"/lib/cjs"),
+		// 	],
+		// 	"cleanVueFileName": true
+		// })
 	],
 	build: {
 		emptyOutDir: true,
