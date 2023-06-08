@@ -40,7 +40,10 @@ importers:
       vitepress: 1.0.0-beta.1
 
   example:
-    specifiers: {}
+    specifiers:
+      hzlzh-ui: workspace:^1.0.5
+    dependencies:
+      hzlzh-ui: link:..
 
 packages:
 

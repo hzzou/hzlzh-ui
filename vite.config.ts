@@ -1,7 +1,7 @@
-import {defineConfig} from "vite";
 import vue from "@vitejs/plugin-vue";
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
+import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
 
@@ -28,6 +28,9 @@ export default defineConfig({
 		})
 	],
 	build: {
+		targets: ["chrome 52"],
+        cssTarget: ["chrome 52"],
+		minify: false,
 		emptyOutDir: true,
 		lib: {
 			entry: [
