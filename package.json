@@ -1,6 +1,6 @@
 {
   "name": "hzlzh-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "",
   "main": "./lib/es/index.js",
