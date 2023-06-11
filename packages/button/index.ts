@@ -1,3 +1,3 @@
-import HzButton from "./basic.vue";
+import Button from "./basic.vue";
 
-export default HzButton;
+export default Button;

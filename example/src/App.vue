@@ -1,11 +1,11 @@
 <template>
     <div>
-        <Button>1223</Button>
-        <Input inputValue="tete">12212</Input>
+        <hz-button>121223</hz-button>
+<!--        <hz-input inputValue="tete">12212</hz-input>-->
     </div>
 </template>
 <script setup lang="ts">
-import {Button, Input} from "hzlzh-ui";
+
 </script>
 
 

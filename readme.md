@@ -4,3 +4,4 @@
 * ts版本
 * rimraf lib 可以删除文件夹lib
 * storybook组件说明文档工具需要项目有prettier才能安装成功
+* unplugin-vue-components 自动按需引入组件，不需要全局注册
