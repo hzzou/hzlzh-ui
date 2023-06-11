@@ -2,4 +2,5 @@
 
 * 有声明文件支持
 * ts版本
-* 若此组件库使用在比开发此组件库低的vite版本上，将有可能有bug
+* rimraf lib 可以删除文件夹lib
+* storybook组件说明文档工具需要项目有prettier才能安装成功

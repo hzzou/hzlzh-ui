@@ -33,3 +33,6 @@ tsconfig.node.json
 packages
 vite.config.ts
 .gitignore
+.storybook
+stories
+.prettierrc

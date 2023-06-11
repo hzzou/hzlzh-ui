@@ -1,7 +1,7 @@
 import vue from "@vitejs/plugin-vue";
 import fs from "node:fs";
 import path from "node:path";
-import { defineConfig } from "vite";
+import {defineConfig, UserConfigExport} from "vite";
 import dts from "vite-plugin-dts";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
 
@@ -18,14 +18,14 @@ items.map(ele => {
 
 export default defineConfig({
 	plugins: [
-		vue(),
-		vueSetupExtend(),
-		dts({
-			"outputDir":[
-				path.resolve(__dirname+"/lib/es"),
-				path.resolve(__dirname+"/lib/cjs"),
-			]
-		})
+        vue(),
+        vueSetupExtend(),
+        dts({
+            "outputDir":[
+                path.resolve(__dirname+"/lib/es"),
+                path.resolve(__dirname+"/lib/cjs"),
+            ]
+        })
 	],
 	build: {
 		targets: ["chrome 52"],
@@ -60,7 +60,17 @@ export default defineConfig({
 					globals: {
 						vue: "Vue"
 					}
-				}]
+				},
+                {
+                    dir: "lib/amd",
+                    format: "amd",
+                    exports: "named",
+                    name: "[named].js",
+                    preserveModules: true,
+                    globals: {
+                        vue: "Vue"
+                    }
+                }]
 		}
 	}
-});
+} as UserConfigExport);

@@ -8,7 +8,9 @@
     "extends": [
         "eslint:recommended",
         "plugin:vue/vue3-essential",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:storybook/recommended"
     ],
     "parser": "vue-eslint-parser",
     "parserOptions": {
@@ -18,7 +20,8 @@
     },
     "plugins": [
         "vue",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
         "indent": [

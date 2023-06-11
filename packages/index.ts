@@ -1,7 +1,7 @@
-import Button from "./button/basic.vue";
-import Input from "./input/basic.vue";
+import HzButton from "./button";
+import HzInput from "./input";
 
 export {
-	Button,
-	Input
+	HzButton,
+	HzInput
 };

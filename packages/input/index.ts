@@ -1,3 +1,3 @@
-import Input from "./basic.vue";
+import HzInput from "./basic.vue";
 
-export default Input;
+export default HzInput;
