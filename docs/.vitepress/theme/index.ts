@@ -1,11 +1,13 @@
-// https://vitepress.dev/guide/custom-theme
-import Layout from './Layout.vue'
-import './style.css'
-
+import DefaultTheme from "vitepress/theme";
+import "hzlzh-ui/lib/es/style.css";
+import hzlzhUI from "hzlzh-ui";
 export default {
-  Layout,
+    ...DefaultTheme,
   enhanceApp({ app, router, siteData }) {
-    // ...
+    // console.log(app)
+    // console.log(router)
+    // console.log(siteData)
+      app.use(hzlzhUI);
   }
 }
 

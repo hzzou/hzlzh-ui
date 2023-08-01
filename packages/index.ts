@@ -2,10 +2,10 @@ import Button from "./button";
 import Input from "./input";
 import { App } from "vue";
 
-const prefix = "hz";
+const prefix = "hz-";
 const components = [
-    {name: "hz-button", value: Button},
-    {name: "hzh-input", value: Input}
+    {name: prefix+"button", value: Button},
+    {name: prefix+"input", value: Input}
 ];
 
 // 作单独引入或者配套插件自动引入

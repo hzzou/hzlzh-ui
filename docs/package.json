@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vitepress dev",
+    "docs:dev": "vitepress dev --port 1234",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
@@ -12,6 +12,7 @@
   "author": "hzlzh",
   "license": "ISC",
   "devDependencies": {
+    "hzlzh-ui": "^1.0.8",
     "vitepress": "1.0.0-beta.1"
   }
 }
