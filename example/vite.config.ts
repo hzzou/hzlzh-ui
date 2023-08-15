@@ -7,17 +7,18 @@ import Components from "unplugin-vue-components/vite";
 export default defineConfig({
 	plugins: [
         vue(),
-        // Components({
-        //     resolvers: [
-        //         (componentName) => {
-        //             // 此处componentName是来自页面上使用的组件前缀
-        //             console.log(componentName)
-        //             if(componentName.toLowerCase().startsWith("hz")){
-        //                 return {name: componentName.slice(2), from: "hzlzh-ui"}
-        //             }
-        //         }
-        //     ]
-        // })
+        // 动态引入
+        Components({
+            resolvers: [
+                (componentName) => {
+                    // 此处componentName是来自页面上使用的组件前缀
+                    console.log(componentName)
+                    if(componentName.toLowerCase().startsWith("hz")){
+                        return {name: componentName.slice(2), from: "hzlzh-ui"}
+                    }
+                }
+            ]
+        })
     ],
 	resolve:{
 		alias:{

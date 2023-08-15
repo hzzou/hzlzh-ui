@@ -4,7 +4,7 @@ import "hzlzh-ui/style.css"
 import hzlzhUI from "hzlzh-ui";
 
 const app = createApp(App);
-
-app.use(hzlzhUI);
+// 全局引入
+// app.use(hzlzhUI);
 app.mount('#app');
 

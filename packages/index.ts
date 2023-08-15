@@ -2,6 +2,7 @@ import Button from "./button";
 import Input from "./input";
 import { App } from "vue";
 
+// 添加组件前缀(全局引入时使用)
 const prefix = "hz-";
 const components = [
     {name: prefix+"button", value: Button},
