@@ -1,0 +1,24 @@
+.basicInput input[data-v-c5bcf5b1] {
+  border: 1px solid #dedede;
+  font-size: 20px;
+}.basicButton button[data-v-7b475eea] {
+  padding: 7px 14px;
+  outline: none;
+  border-width: 1px;
+  border-radius: 5%;
+}
+.basicButton button.small[data-v-7b475eea] {
+  padding: 5px 10px;
+}
+.basicButton button.large[data-v-7b475eea] {
+  padding: 8px 20px;
+}
+.basicButton button.default[data-v-7b475eea] {
+  background: linear-gradient(#fff, #ccc 50%, #fff);
+  border-color: #ddd;
+}
+.basicButton button.primary[data-v-7b475eea] {
+  background: linear-gradient(rgba(65, 154, 246, 0.9), #154ee6 50%, rgba(65, 154, 246, 0.9));
+  border-color: rgba(65, 154, 246, 0.8);
+  color: #fff;
+}

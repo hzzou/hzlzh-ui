@@ -1,6 +1,6 @@
 ----
 # **测试input**
-<hz-input></hz-input>
+<hz-input model="hzlzh"></hz-input>
 
 ```vue
 <template>
