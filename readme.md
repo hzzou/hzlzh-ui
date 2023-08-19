@@ -2,7 +2,7 @@
 
 * 是ts版本，有声明文件支持，使用vite-plugin-dts声明插件
 * 说明文档的vitePress版本需要单独进入docs文件夹启动(npx vitepress init)
-* 说明文档的storybook版本，主目录项目的script下()
+* 说明文档的storybook版本，主目录项目的script下(npx storybook init)
 * rimraf lib 可以删除文件夹lib
 * storybook组件说明文档工具需要项目有prettier才能安装成功
 * unplugin-vue-components 自动按需引入组件，不需要全局注册

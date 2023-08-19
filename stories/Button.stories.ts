@@ -5,7 +5,10 @@ const meta: Meta<typeof Button> = {
     title: "Lib/Button",
     component: Button,
     parameters:{
-        layout: "center"
+        layout: "center",
+        actions: {
+            handles: ["onClick"]
+        }
     },
     tags: ["autodocs"],
     argTypes: {
@@ -14,18 +17,31 @@ const meta: Meta<typeof Button> = {
             defaultValue: {
                 summary: '按钮'
             },
-            control: false
+            control: {
+                type: "text",
+                resize: "none"
+            }
         },
         size: {
             description: "按钮大小",
             defaultValue: {
-                summary: 'primary'
+                summary: 'default'
             },
             control: {
                 type: "select"
             },
-            options: ["primary", "small"]
-        }
+            options: ["small", "default", "large"]
+        },
+        type: {
+            description: "按钮类型",
+            defaultValue: {
+                summary: "default"
+            },
+            control: {
+                type: "select"
+            },
+            options: ["primary", "default"]
+        },
     }
 }
 
@@ -33,10 +49,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary = {
+export const Default = {
     args:{
-        name: "hzzou",
-        size: "primary"
+        name: "按钮",
+        size: "default",
+        type: "default"
     }
 }
 

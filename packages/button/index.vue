@@ -1,6 +1,7 @@
 <template>
-    <div class="basicButton">
+    <div class="hz-button">
         <button class="default" :class="classList">{{name}}</button>
+        <slot></slot>
     </div>
 </template>
 <script name="hz-button" setup lang="ts">
@@ -32,7 +33,7 @@
 </script>
 
 <style scoped lang="scss">
-    .basicButton{
+    .hz-button{
         button{
             padding: 7px 14px;
             outline: none;

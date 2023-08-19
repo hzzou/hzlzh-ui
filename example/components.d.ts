@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HzButton: typeof import('hzlzh-ui')['Button']
+    HzDialog: typeof import('hzlzh-ui')['Dialog']
     HzInput: typeof import('hzlzh-ui')['Input']
   }
 }

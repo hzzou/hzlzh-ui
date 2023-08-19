@@ -9,6 +9,9 @@ hero:
         - theme: brand
           text: 开始
           link: /components/button
+        - theme: alt
+          text: Github
+          link: https://github.com/hzzou/hzlzh-ui.git
 
 features:
     - icon: 💡
