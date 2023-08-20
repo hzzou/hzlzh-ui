@@ -23,6 +23,8 @@ dist-ssr
 *.sw?
 
 docs
+viteDocs
+.history
 example
 .editorconfig
 .eslintrc.json
@@ -30,7 +32,7 @@ pnpm-lock.yaml
 pnpm-workspace.yaml
 tsconfig.json
 tsconfig.node.json
-packages
+
 vite.config.ts
 .gitignore
 .storybook

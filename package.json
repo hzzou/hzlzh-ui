@@ -5,6 +5,11 @@
   "description": "",
   "main": "./lib/cjs/index.cjs",
   "module": "./lib/es/index.js",
+  "homepage": "https://hzzou.github.io/hzlzh-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzzou/hzlzh-ui"
+  },
   "scripts": {
     "build": "rimraf lib && vite build",
     "storybook": "storybook dev -p 6006",
