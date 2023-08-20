@@ -1,24 +1,63 @@
-.basicInput input[data-v-c5bcf5b1] {
-  border: 1px solid #dedede;
-  font-size: 20px;
-}.basicButton button[data-v-7b475eea] {
+.hz-button button[data-v-44608037] {
   padding: 7px 14px;
   outline: none;
   border-width: 1px;
   border-radius: 5%;
 }
-.basicButton button.small[data-v-7b475eea] {
+.hz-button button.small[data-v-44608037] {
   padding: 5px 10px;
 }
-.basicButton button.large[data-v-7b475eea] {
+.hz-button button.large[data-v-44608037] {
   padding: 8px 20px;
 }
-.basicButton button.default[data-v-7b475eea] {
-  background: linear-gradient(#fff, #ccc 50%, #fff);
+.hz-button button.default[data-v-44608037] {
+  background: linear-gradient(#ccc, #eee 50%, #ccc);
   border-color: #ddd;
 }
-.basicButton button.primary[data-v-7b475eea] {
+.hz-button button.primary[data-v-44608037] {
   background: linear-gradient(rgba(65, 154, 246, 0.9), #154ee6 50%, rgba(65, 154, 246, 0.9));
   border-color: rgba(65, 154, 246, 0.8);
   color: #fff;
+}.hz-input input[data-v-75de10df] {
+  border: 1px solid #dedede;
+  font-size: 20px;
+}.hz-dialog[data-v-2c03542d] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+.hz-dialog .hz-wrap[data-v-2c03542d], .hz-dialog .hz-modal[data-v-2c03542d] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hz-dialog .hz-wrap .hz-content[data-v-2c03542d], .hz-dialog .hz-modal .hz-content[data-v-2c03542d] {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 2px #aaa;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.hz-dialog .hz-wrap .hz-content .header[data-v-2c03542d], .hz-dialog .hz-wrap .hz-content .footer[data-v-2c03542d], .hz-dialog .hz-modal .hz-content .header[data-v-2c03542d], .hz-dialog .hz-modal .hz-content .footer[data-v-2c03542d] {
+  flex: 0 1 10%;
+}
+.hz-dialog .hz-wrap .hz-content .main[data-v-2c03542d], .hz-dialog .hz-modal .hz-content .main[data-v-2c03542d] {
+  flex: 1 1 80%;
+  padding: 10px 0;
+}
+.hz-dialog .hz-wrap .hz-content .footer[data-v-2c03542d], .hz-dialog .hz-modal .hz-content .footer[data-v-2c03542d] {
+  display: flex;
+  justify-content: flex-end;
+}
+.hz-dialog .hz-modal[data-v-2c03542d] {
+  background-color: rgba(0, 0, 0, 0.5);
 }

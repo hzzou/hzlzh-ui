@@ -1,19 +1,35 @@
-----
+
 # **Button 按钮**
-<hz-button name="hzlzh" type="primary" ></hz-button>
+::: tip
+常用的操作按钮
+:::
+
+##
+<hz-button type="primary" size="large" >hzlzh</hz-button>
 
 ```vue
 <template>
-    <hz-button :name="custName" type="primary"></hz-button>
+    <hz-button size="large" type="primary"></hz-button>
 </template>
-<script lang="ts" setup>
-import { reactive } from "vue";
-
-const custName = reactive('hzlzh');
-</script>
 ```
+<style>
+@import url("../common/style.scss");
+</style>
+## **Button API**
+### **Button Attributes**
+| 属性名  | 说明   | 类型     | 默认值     |
+|------|------|--------|---------|
+| name | 按钮名字 | String | 按钮      |
+ | size | 按钮大小 | String | default |
+ | type | 按钮类型 | String | default |
 
-| <div style="width: 100px">属性名</div> | <div style="width: 150px">说明</div> | <div style="width: 100px">类型</div> | <div style="width: 150px">默认值</div> |
-|-------------------------------------|------------------------------------|------------------------------------|-------------------------------------|
-| name                                | 按钮名字                               | String                             | 按钮                                  |
+### **Button Events**
+| 名称    | 说明   | 类型       |
+|-------|------|----------|
+| click | 点击事件 | Function |
+
+### **Button Slots**
+| 插槽名称    | 说明       |
+|---------|----------|
+| default | 	自定义默认内容 |
 

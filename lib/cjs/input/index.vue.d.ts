@@ -1,16 +1,16 @@
 declare const _sfc_main: import("vue").DefineComponent<{
-    model: {
+    modelValue: {
         type: (StringConstructor | NumberConstructor)[];
-        default: any;
+        default: string;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "updateModel"[], "updateModel", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    model: {
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    modelValue: {
         type: (StringConstructor | NumberConstructor)[];
-        default: any;
+        default: string;
     };
 }>> & {
-    onUpdateModel?: (...args: any[]) => any;
+    "onUpdate:modelValue"?: (...args: any[]) => any;
 }, {
-    model: string | number;
+    modelValue: string | number;
 }, {}>;
 export default _sfc_main;

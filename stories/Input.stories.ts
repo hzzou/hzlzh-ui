@@ -19,7 +19,7 @@ const meta: Meta<typeof Input> = {
 
 export default meta;
 
-export const Primary = {
+export const Default = {
     args: {
         model: "hzlzh"
     }
