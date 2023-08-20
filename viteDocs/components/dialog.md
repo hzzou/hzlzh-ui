@@ -6,7 +6,7 @@
 
 ##
 <hz-button type="primary" @click="showModal = true">展示弹窗</hz-button>
-<hz-dialog v-model="showModal" title="2121">
+<hz-dialog v-model="showModal" title="标题">
     <template #default>
             内容
     </template>

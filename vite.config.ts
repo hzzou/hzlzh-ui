@@ -22,6 +22,7 @@ export default defineConfig({
         vueSetupExtend(),
         dts({
             "outputDir":[
+                // 声明文件输出到对应目录下
                 path.resolve(__dirname+"/lib/es"),
                 path.resolve(__dirname+"/lib/cjs"),
             ]
@@ -34,9 +35,11 @@ export default defineConfig({
 		emptyOutDir: true,
 		lib: {
 			entry: [
-				path.resolve(__dirname+"/packages/index.ts"),
-				...singleInput
-			],
+                // 统一入口(编译后形成统一出口)
+                path.resolve(__dirname+"/packages/index.ts"),
+                // 单独入口(编译后形成单独出口)
+                ...singleInput
+            ],
 			name: "hzlzh-ui"
 		},
 		outDir: path.resolve(__dirname, "lib"),

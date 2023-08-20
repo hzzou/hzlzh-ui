@@ -1,24 +1,4 @@
-.hz-button button[data-v-44608037] {
-  padding: 7px 14px;
-  outline: none;
-  border-width: 1px;
-  border-radius: 5%;
-}
-.hz-button button.small[data-v-44608037] {
-  padding: 5px 10px;
-}
-.hz-button button.large[data-v-44608037] {
-  padding: 8px 20px;
-}
-.hz-button button.default[data-v-44608037] {
-  background: linear-gradient(#ccc, #eee 50%, #ccc);
-  border-color: #ddd;
-}
-.hz-button button.primary[data-v-44608037] {
-  background: linear-gradient(rgba(65, 154, 246, 0.9), #154ee6 50%, rgba(65, 154, 246, 0.9));
-  border-color: rgba(65, 154, 246, 0.8);
-  color: #fff;
-}.hz-input input[data-v-75de10df] {
+.hz-input input[data-v-75de10df] {
   border: 1px solid #dedede;
   font-size: 20px;
 }.hz-dialog[data-v-2c03542d] {
@@ -60,4 +40,24 @@
 }
 .hz-dialog .hz-modal[data-v-2c03542d] {
   background-color: rgba(0, 0, 0, 0.5);
+}.hz-button button[data-v-44608037] {
+  padding: 7px 14px;
+  outline: none;
+  border-width: 1px;
+  border-radius: 5%;
+}
+.hz-button button.small[data-v-44608037] {
+  padding: 5px 10px;
+}
+.hz-button button.large[data-v-44608037] {
+  padding: 8px 20px;
+}
+.hz-button button.default[data-v-44608037] {
+  background: linear-gradient(#ccc, #eee 50%, #ccc);
+  border-color: #ddd;
+}
+.hz-button button.primary[data-v-44608037] {
+  background: linear-gradient(rgba(65, 154, 246, 0.9), #154ee6 50%, rgba(65, 154, 246, 0.9));
+  border-color: rgba(65, 154, 246, 0.8);
+  color: #fff;
 }
