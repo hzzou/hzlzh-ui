@@ -1,7 +1,10 @@
 import { defineConfig } from 'vitepress'
+import path from "node:path"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    base: "/hzlzh-ui/",
+    outDir:  path.resolve(__dirname+"../../../docs"),
     title: "hzlzh-ui",
     description: "hzlzh-ui组件库文档说明",
     themeConfig:{
