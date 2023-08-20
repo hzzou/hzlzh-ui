@@ -1,17 +1,14 @@
 <template>
     <div class="hz-button">
-        <button class="default" :class="classList">{{name}}</button>
-        <slot></slot>
+        <button class="default" :class="classList">
+            <slot>按钮</slot>
+        </button>
     </div>
 </template>
 <script name="hz-button" setup lang="ts">
     import { computed } from "vue";
 
     const props = defineProps({
-        name: {
-            type: String,
-            default: "按钮"
-        },
         type: {
             type: String,
             default: "default"
@@ -46,7 +43,7 @@
                 padding: 8px 20px;
             }
             &.default{
-                background: linear-gradient(#fff, #ccc 50%, #fff);
+                background: linear-gradient(#ccc, #eee 50%, #ccc);
                 border-color: #ddd;
             }
             &.primary{

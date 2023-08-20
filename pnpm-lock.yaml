@@ -68,10 +68,12 @@ importers:
   docs:
     specifiers:
       hzlzh-ui: ^1.0.8
+      sass: ^1.62.1
       vitepress: 1.0.0-beta.1
     devDependencies:
       hzlzh-ui: link:..
-      vitepress: 1.0.0-beta.1
+      sass: 1.62.1
+      vitepress: 1.0.0-beta.1_sass@1.62.1
 
   example:
     specifiers:
@@ -4582,7 +4584,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.9
+      vite: 4.3.9_sass@1.62.1
       vue: 3.3.4
     dev: true
 
@@ -9352,7 +9354,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/4.3.9:
+  /vite/4.3.9_sass@1.62.1:
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9380,11 +9382,12 @@ packages:
       esbuild: 0.17.19
       postcss: 8.4.24
       rollup: 3.23.1
+      sass: 1.62.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-beta.1:
+  /vitepress/1.0.0-beta.1_sass@1.62.1:
     resolution: {integrity: sha512-V2yyCwQ+v9fh7rbnGDLp8M7vHa9sLElexXf/JHtBOsOwv7ed9wt1QI4WUagYgKR3TeoJT9v2s6f0UaQSne0EvQ==}
     hasBin: true
     dependencies:
@@ -9399,7 +9402,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.2
-      vite: 4.3.9
+      vite: 4.3.9_sass@1.62.1
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'

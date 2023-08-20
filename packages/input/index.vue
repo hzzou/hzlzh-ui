@@ -9,7 +9,7 @@
     const props = defineProps({
         modelValue: {
             type: [String, Number],
-            default: null
+            default: ""
         }
     });
     // 全局指令v-model vue官方定义的emit是update:modelValue

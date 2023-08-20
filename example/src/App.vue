@@ -1,6 +1,6 @@
 <template>
     <div>
-        <hz-button type="primary" size="large"></hz-button>
+        <hz-button type="primary" size="large">1221</hz-button>
         <hz-input v-model="custValue" ></hz-input>
         <hz-dialog v-model="showDialog" width="400px" height="500px" >
             <template #header>
