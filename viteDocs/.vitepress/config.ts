@@ -3,8 +3,6 @@ import path from "node:path"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    base: "/hzlzh-ui/",
-    outDir:  path.resolve(__dirname+"../../../docs"),
     title: "hzlzh-ui",
     description: "hzlzh-ui组件库文档说明",
     themeConfig:{
@@ -15,8 +13,10 @@ export default defineConfig({
                 items:[
                     {text: "介绍", link: "/"},
                     {text: "Button", link: "/components/button"},
-                    {text: "Input", link: "/components/input"},
                     {text: "Dialog", link: "/components/dialog"},
+                    {text: "Input", link: "/components/input"},
+                    {text: "Icon", link: "/components/icon"},
+                    {text: "Popper", link: "/components/popper"},
                 ]
             }
         ],

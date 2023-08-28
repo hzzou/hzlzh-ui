@@ -9,6 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     HzButton: typeof import('hzlzh-ui')['Button']
     HzDialog: typeof import('hzlzh-ui')['Dialog']
+    HzIcon: typeof import('hzlzh-ui')['Icon']
     HzInput: typeof import('hzlzh-ui')['Input']
+    HzPopper: typeof import('hzlzh-ui')['Popper']
   }
 }

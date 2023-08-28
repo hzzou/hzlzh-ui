@@ -8,9 +8,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:vue/vue3-essential",
-        "plugin:@typescript-eslint/recommended",
-        "prettier",
-        "plugin:storybook/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "vue-eslint-parser",
     "parserOptions": {
@@ -20,13 +18,16 @@
     },
     "plugins": [
         "vue",
-        "@typescript-eslint",
-        "prettier"
+        "@typescript-eslint"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
+        "indent": "off",
+        "vue/script-indent": [
+          "error",
+          4,
+          {
+            "baseIndent": 1
+          }
         ],
         "linebreak-style": [
             "error",
@@ -39,6 +40,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "vue/multi-word-component-names": "off"
     }
 }

@@ -1,5 +1,7 @@
 ## 个人自定义VUE3组件库(个人学习)
 
+* 开发模式的时候, "exports"的导出口使用开发packages路径下的出口
+* 发布模式的时候, "exports"的导出口使用打包后lib路径下的出口
 * 是ts版本，有声明文件支持，使用vite-plugin-dts声明插件
 * 说明文档的vitePress版本需要单独进入docs文件夹启动(npx vitepress init)
 * 说明文档的storybook版本，主目录项目的script下(npx storybook init)
@@ -13,3 +15,5 @@
 * 单独引入时时依靠插件unplugin-vue-components/vite判断在页面上使用的前缀从对应的组件库引入
 * 全局注册时需要在组统一的出口处统一添加前缀
 * 组件可以直接在vitePress中进行配置展示和调用, 根据需要可以在example中写demo,也可直接写在文档中
+* peerDependencies依赖一是为了在使用组件时要提示安装它，二是方便在打包是external掉
+* md文件中使用具名插槽用#name的形式会报错,改用v-slot:name不会

@@ -2,8 +2,9 @@ import vue from "@vitejs/plugin-vue";
 import fs from "node:fs";
 import path from "node:path";
 import {defineConfig, UserConfigExport} from "vite";
-import dts from "vite-plugin-dts";
-import vueSetupExtend from "vite-plugin-vue-setup-extend";
+import dts from "vite-plugin-dts"; // 生成声明文件
+import vueSetupExtend from "vite-plugin-vue-setup-extend"; // script上支持name
+import legacy from "@vitejs/plugin-legacy"; // 不支持库模式
 
 // 获取items下一级所有的文件和文件夹
 const items = fs.readdirSync(path.resolve(__dirname, "packages"))

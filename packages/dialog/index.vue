@@ -4,6 +4,7 @@
             <div class="hz-content" @click.stop :style="{width, height}" >
                 <div class="header">
                     <slot name="header">{{title}}</slot>
+                    <Icon class="close" name="close" @click.stop="hideDialog" />
                 </div>
                 <div class="main">
                     <slot></slot>
@@ -29,7 +30,7 @@
     </div>
 </template>
 <script name="hz-dialog" setup lang="ts">
-
+    import Icon from "../icon";
     const props = defineProps({
         modelValue: {
             type: Boolean,
@@ -41,7 +42,7 @@
         },
         title: {
             type: String,
-            default: ''
+            default: ""
         },
         width: {
             type: [String, Number],
@@ -59,7 +60,7 @@
     // 隐藏dialog
     const hideDialog = () => {
         emitEvent("update:modelValue");
-    }
+    };
 
 </script>
 
@@ -88,6 +89,14 @@
                 padding: 10px;
                 .header, .footer{
                     flex: 0 1 10%;
+                }
+                .header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .close{
+                        cursor: pointer;
+                    }
                 }
                 .main{
                     flex: 1 1 80%;

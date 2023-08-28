@@ -27,9 +27,10 @@ const cusName = ref('hzlzh');
 @import url("../common/style.scss");
 </style>
 
-| 属性名                 | 说明   | 类型             | 默认值  |
-|---------------------|------|----------------|------|
-| model-value/v-model | 绑定的值 | String, Number | null |
+| 属性名                 | 说明   | 类型             | 默认值                                                                                                                                                                                                                    |
+|---------------------|------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| model-value/v-model | 绑定的值 | String, Number | null                                                                                                                                                                                                                   |
+| type                | 类型   | String         | text <hz-popper width="250" place="bottom-start"><hz-icon name="help" color="#999" size="20"></hz-icon><template v-slot:content>text, textarea, password, button, checkbox, radio, file, number</template></hz-popper> |
 
 ### **Input Events**
 | 名称     | 说明                                     | 类型       |

@@ -1,6 +1,6 @@
 <template>
     <div class="hz-input">
-        <input :value="modelValue" @input="handleInput"  />
+        <input :type="type" :value="modelValue" @input="handleInput"  />
         <slot></slot>
     </div>
 </template>
@@ -10,14 +10,19 @@
         modelValue: {
             type: [String, Number],
             default: ""
+        },
+        type: {
+            type: String,
+            default: "text"
         }
     });
+
     // 全局指令v-model vue官方定义的emit是update:modelValue
     const emitEvent = defineEmits(["update:modelValue"]);
 
     const handleInput = (e) => {
         emitEvent("update:modelValue", e.target.value);
-    }
+    };
 
 </script>
 
