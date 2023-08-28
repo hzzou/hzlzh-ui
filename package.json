@@ -25,8 +25,8 @@
   },
   "exports": {
     ".": {
-      "import": "./packages/index.ts",
-      "require": "./packages/index.ts"
+      "import": "./lib/es/index.js",
+      "require": "./lib/cjs/index.cjs"
     },
     "./style.css": "./lib/es/style.css",
     "./lib/es/style.css": "./lib/es/style.css"
