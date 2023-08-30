@@ -12,7 +12,9 @@
   },
   "scripts": {
     "build": "rimraf lib && vite build",
-    "eslint": "eslint packages/**/** --fix"
+    "eslint": "eslint packages/**/** --fix",
+    "test": "vitest",
+    "coverave": "vitest run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.47"
@@ -38,8 +40,11 @@
     "@typescript-eslint/parser": "^5.59.9",
     "@vitejs/plugin-legacy": "^4.1.1",
     "@vitejs/plugin-vue": "^4.1.0",
+    "@vitest/coverage-v8": "^0.34.3",
+    "@vue/test-utils": "^2.4.1",
     "eslint": "8.0.0",
     "eslint-plugin-vue": "^9.14.1",
+    "happy-dom": "^10.11.2",
     "rollup": "^3.28.1",
     "sass": "^1.62.1",
     "terser": "^5.19.2",
@@ -48,6 +53,7 @@
     "vite": "4.0.0",
     "vite-plugin-dts": "^2.3.0",
     "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vitest": "^0.34.3",
     "vue-tsc": "^1.4.2"
   },
   "workspaces": [

@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import vue from "@vitejs/plugin-vue";
 import fs from "node:fs";
 import path from "node:path";
@@ -18,6 +20,10 @@ items.map(ele => {
 });
 
 export default defineConfig({
+    test:{
+        // 模拟dom
+        environment: "happy-dom"
+    },
 	plugins: [
         vue(),
         vueSetupExtend(),
