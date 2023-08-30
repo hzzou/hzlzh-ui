@@ -1,6 +1,6 @@
 <template>
     <div class="hz-button">
-        <button class="default" :class="classList">
+        <button :class="classList">
             <slot>按钮</slot>
         </button>
     </div>

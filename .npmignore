@@ -38,3 +38,5 @@ vite.config.ts
 .storybook
 stories
 .prettierrc
+
+coverage
