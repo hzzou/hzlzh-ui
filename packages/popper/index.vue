@@ -1,6 +1,8 @@
 <template>
     <div class="hz-popper" ref="popperRef" id="hzPopper" @mouseenter="handleEnter" @mouseleave="handleLeave">
-        <slot></slot>
+        <div class="default">
+            <slot></slot>
+        </div>
         <div class="hz-content" v-show="showPopper" :style="{width: width+'px',...popperStyle}">
             <div class="tip" :style="tipColor"></div>
             <div class="tip-cover" :style="tipCoverColor"></div>
@@ -44,7 +46,7 @@
     const handleEnter = (event) => {
         showPopper.value = true;
         emitEvent("show", { show: true, event: event});
-        const rect  = document.querySelector("#hzPopper").getClientRects()[0];
+        const rect  = popperRef.value!.getClientRects()[0];
 
         switch (props.place) {
         case "bottom":

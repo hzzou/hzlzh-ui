@@ -18,5 +18,6 @@
 * peerDependencies依赖一是为了在使用组件时要提示安装它，二是方便在打包是external掉
 * md文件中使用具名插槽用#name的形式会报错,改用v-slot:name不会
 * vitest是测试工具库，配合vite一起使用在vite配置文件头部中需要添加声明文件,需要添加对应测试命令
+* vitest button命令是筛选只包含button的测试文件
 * happy-dom是模拟dom,安装后在vite配置文件添加test下environment
 * @vitest/coverage-v8是测试覆盖率的, 需要添加对应测试命令
