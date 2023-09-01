@@ -1,7 +1,7 @@
 <template>
     <div class="app">
-<!--        <hz-button type="primary" size="large">1221</hz-button>
-        <hz-input v-model="custValue" ></hz-input>-->
+        <hz-button type="primary" size="large">1221</hz-button>
+        <hz-input type="text" max-length="2"  ></hz-input>
 <!--        <hz-dialog v-model="showDialog" width="400px" height="500px" >
             <template #header>
                 3223434
@@ -13,11 +13,6 @@
                 地下
             </template>
         </hz-dialog>-->
-<!--        <hz-popper>-->
-<!--&lt;!&ndash;            <hz-icon name="help" color="#999" size="20"></hz-icon>&ndash;&gt;-->
-<!--            <hz-button type="primary" size="large">1221</hz-button>-->
-<!--            <template #content>hover的内容322324244422332322332</template>-->
-<!--        </hz-popper>-->
 
         <hz-popper @show="handleShow">
             <hz-icon name="help" color="#999" size="20"></hz-icon>

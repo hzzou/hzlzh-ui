@@ -13,14 +13,14 @@
   "scripts": {
     "build": "rimraf lib && vite build",
     "eslint": "eslint packages/**/** --fix",
-    "test": "vitest",
-    "coverave": "vitest run --coverage"
+    "test": "vitest popper",
+    "coverave": "vitest popper run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.47"
   },
   "peerDependencies": {
-    "vue": "^3.2.47"
+    "vue": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"

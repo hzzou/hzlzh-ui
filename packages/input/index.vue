@@ -1,6 +1,14 @@
 <template>
     <div class="hz-input">
-        <input :type="type" :value="modelValue" @input="handleInput"  />
+        <input
+            :type="type"
+            :max="max"
+            :min="min"
+            :step="step"
+            :maxlength="maxLength"
+            :minlength="minLength"
+            :value="modelValue"
+            @input="handleInput"  />
         <slot></slot>
     </div>
 </template>
@@ -14,6 +22,26 @@
         type: {
             type: String,
             default: "text"
+        },
+        min: {
+            type: [String, Number],
+            default: 0
+        },
+        max: {
+            type: [String, Number],
+            default: 1000
+        },
+        step: {
+            type: [String, Number],
+            default: 1
+        },
+        maxLength: {
+            type: [String, Number],
+            default: 100
+        },
+        minLength: {
+            type: [String, Number],
+            default: 1
         }
     });
 

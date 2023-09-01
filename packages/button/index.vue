@@ -19,6 +19,7 @@
         },
     });
 
+    // 动态class列表
     const classList = computed(()=>{
         if(props.size !== ""){
             return [props.type, props.size];

@@ -19,7 +19,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: (StringConstructor | NumberConstructor)[];
         default: string;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "open" | "close")[], "update:modelValue" | "open" | "close", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
         type: BooleanConstructor;
         default: boolean;
@@ -42,6 +42,8 @@ declare const _sfc_main: import("vue").DefineComponent<{
     };
 }>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
+    onOpen?: (...args: any[]) => any;
+    onClose?: (...args: any[]) => any;
 }, {
     modelValue: boolean;
     modal: boolean;

@@ -18,6 +18,7 @@
             <div class="hz-content" :style="{width, height}" >
                 <div class="header">
                     <slot name="header">{{title}}</slot>
+                    <Icon class="close" name="close" @click.stop="hideDialog" />
                 </div>
                 <div class="main">
                     <slot></slot>
@@ -31,6 +32,7 @@
 </template>
 <script name="hz-dialog" setup lang="ts">
     import Icon from "../icon";
+    import { watch } from "vue";
     const props = defineProps({
         modelValue: {
             type: Boolean,
@@ -54,8 +56,18 @@
         }
     });
 
-
-    const emitEvent = defineEmits(["update:modelValue"]);
+    watch(()=>props.modelValue, (newVal)=>{
+        if(newVal){
+            // 触发打开事件
+            emitEvent("open", {show: true});
+        }
+        else{
+            // 触发关闭事件
+            emitEvent("close", {show: false});
+        }
+    }, {immediate: true});
+    // 事件
+    const emitEvent = defineEmits(["open", "close", "update:modelValue"]);
 
     // 隐藏dialog
     const hideDialog = () => {
