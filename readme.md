@@ -21,3 +21,4 @@
 * vitest button命令是筛选只包含button的测试文件
 * happy-dom是模拟dom,安装后在vite配置文件添加test下environment
 * @vitest/coverage-v8是测试覆盖率的, 需要添加对应测试命令
+* 测试文件夹名只要带有test名字，不管放在哪里都可以被找到

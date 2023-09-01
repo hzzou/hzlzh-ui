@@ -61,9 +61,10 @@ const showModal = ref(false);
 | height              | 弹窗高度 | String,Number | ''    |
 
 ### **Dialog Events**
-| 名称    | 说明            | 类型       |
-|-------|---------------|----------|
-| click | 弹窗暂时还没添加自定义事件 | Function |
+| 名称    | 说明          | 类型       |
+|-------|-------------|----------|
+| open  | 打开Dialog的会掉 | Function |
+| close | 关闭Dialog的会掉 | Function |
 
 ### **Dialog Slots**
 | 插槽名称    | 说明                          |
