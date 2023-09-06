@@ -17,6 +17,7 @@ export default defineConfig({
                     {text: "Input", link: "/components/input"},
                     {text: "Icon", link: "/components/icon"},
                     {text: "Popper", link: "/components/popper"},
+                    {text: "VirtualTable", link: "/components/virtual-table"},
                 ]
             }
         ],

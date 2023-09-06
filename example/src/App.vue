@@ -1,7 +1,7 @@
 <template>
     <div class="app">
-        <hz-button type="primary" size="large">1221</hz-button>
-        <hz-input type="text" max-length="2"  ></hz-input>
+<!--        <hz-button type="primary" size="large">1221</hz-button>
+        <hz-input type="text" max-length="2"  ></hz-input>-->
 <!--        <hz-dialog v-model="showDialog" width="400px" height="500px" >
             <template #header>
                 3223434
@@ -14,10 +14,13 @@
             </template>
         </hz-dialog>-->
 
-        <hz-popper @show="handleShow">
+<!--        <hz-popper @show="handleShow">
             <hz-icon name="help" color="#999" size="20"></hz-icon>
             <template #content>small, default, large</template>
-        </hz-popper>
+        </hz-popper>-->
+        <hz-virtual-table align="center" headerAlign="center" :table-data="tableData">
+
+        </hz-virtual-table>
 
     </div>
 </template>
@@ -26,6 +29,17 @@
     const custName = ref(""),
           custValue = ref("test"),
           showDialog = ref(true);
+
+    const tableData = [],
+          len = 10000;
+    for (let i = 0; i < len; i++) {
+        tableData.push({
+            name: "name_" + (i + 1),
+            date: "date_" + (i + 1),
+            address: "address_" + (i + 1),
+            state: "state_" + (i + 1),
+        });
+    }
 
     const handleValue = (val)=> {
         console.log(val);
@@ -46,7 +60,8 @@
 </script>
 <style>
 .app{
-    padding: 100px;
+    margin-top: 100px;
+    padding: 10px;
 }
 </style>
 

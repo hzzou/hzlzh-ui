@@ -12,5 +12,6 @@ declare module 'vue' {
     HzIcon: typeof import('hzlzh-ui')['Icon']
     HzInput: typeof import('hzlzh-ui')['Input']
     HzPopper: typeof import('hzlzh-ui')['Popper']
+    HzVirtualTable: typeof import('hzlzh-ui')['VirtualTable']
   }
 }

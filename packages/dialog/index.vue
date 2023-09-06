@@ -55,6 +55,8 @@
             default: ""
         }
     });
+    // 事件
+    const emitEvent = defineEmits(["open", "close", "update:modelValue"]);
 
     watch(()=>props.modelValue, (newVal)=>{
         if(newVal){
@@ -66,8 +68,6 @@
             emitEvent("close", {show: false});
         }
     }, {immediate: true});
-    // 事件
-    const emitEvent = defineEmits(["open", "close", "update:modelValue"]);
 
     // 隐藏dialog
     const hideDialog = () => {

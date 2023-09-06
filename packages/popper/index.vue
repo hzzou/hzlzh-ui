@@ -35,13 +35,13 @@
         }
     });
 
+    const emitEvent = defineEmits(["show", "hide"]);
+
     const showPopper = ref(false),
           popperStyle = ref(null),
           tipColor = ref(null),
           tipCoverColor = ref(null),
           popperRef = ref(null);
-
-    const emitEvent = defineEmits(["show", "hide"]);
 
     const handleEnter = (event) => {
         showPopper.value = true;

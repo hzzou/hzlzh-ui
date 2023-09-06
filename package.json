@@ -13,8 +13,8 @@
   "scripts": {
     "build": "rimraf lib && vite build",
     "eslint": "eslint packages/**/** --fix",
-    "test": "vitest popper",
-    "coverave": "vitest popper run --coverage"
+    "test": "vitest virtualTable",
+    "coverave": "vitest virtualTable run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.47"
