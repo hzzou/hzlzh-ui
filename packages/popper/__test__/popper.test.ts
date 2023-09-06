@@ -1,7 +1,6 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
-import { mount, shallowMount } from "@vue/test-utils";
+import { describe, it, expect, beforeEach } from "vitest";
+import { mount } from "@vue/test-utils";
 import Popper from "../index";
-import { nextTick } from "vue";
 
 
 describe("测试popper组件", ()=>{

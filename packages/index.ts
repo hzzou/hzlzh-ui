@@ -3,6 +3,7 @@ import Input from "./input";
 import Dialog from "./dialog";
 import Popper from "./popper";
 import Icon from "./icon";
+import VirtualTable from "./virtualTable";
 
 
 import { App } from "vue";
@@ -15,6 +16,7 @@ const components = [
 	{name: prefix+"dialog", value: Dialog},
 	{name: prefix+"popper", value: Popper},
 	{name: prefix+"icon", value: Icon},
+	{name: prefix+"virtual-table", value: VirtualTable},
 ];
 
 // 作单独引入或者配套插件自动引入
@@ -23,7 +25,8 @@ export {
 	Input,
 	Dialog,
 	Popper,
-	Icon
+	Icon,
+    VirtualTable
 };
 
 // 使用app.use的方式全局注册
