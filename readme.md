@@ -25,3 +25,4 @@ pnpm i hzlzh-ui
 * happy-dom是模拟dom,安装后在vite配置文件添加test下environment
 * @vitest/coverage-v8是测试覆盖率的, 需要添加对应测试命令
 * 测试文件夹名只要带有test名字，不管放在哪里都可以被找到
+* npm发包版本即使撤销已经发的包版本，也是不能使用这个版本号
