@@ -2,7 +2,7 @@
   "name": "hzlzh-ui",
   "version": "1.0.16",
   "type": "module",
-  "description": "",
+  "description": "个人自定义vue3组件库",
   "main": "./lib/cjs/index.cjs",
   "module": "./lib/es/index.js",
   "homepage": "https://hzzou.github.io/hzlzh-ui",
