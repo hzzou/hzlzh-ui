@@ -12,7 +12,7 @@
   "author": "hzlzh",
   "license": "ISC",
   "devDependencies": {
-    "hzlzh-ui": "^1.0.8",
+    "@hzlzh/ui": "^1.0.10",
     "sass": "^1.62.1",
     "vitepress": "1.0.0-beta.1"
   }

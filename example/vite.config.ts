@@ -12,9 +12,9 @@ export default defineConfig({
             resolvers: [
                 (componentName) => {
                     // 此处componentName是来自页面上使用的组件前缀
-                    console.log(componentName)
+                    console.log(componentName);
                     if(componentName.toLowerCase().startsWith("hz")){
-                        return {name: componentName.slice(2), from: "hzlzh-ui"}
+                        return {name: componentName.slice(2), from: "@hzlzh/ui"};
                     }
                 }
             ]

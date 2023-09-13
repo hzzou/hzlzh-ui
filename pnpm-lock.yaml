@@ -53,17 +53,14 @@ importers:
 
   example:
     specifiers:
-      hzlzh-ui: ^1.0.10
-    dependencies:
-      hzlzh-ui: link:..
+      '@hzlzh/ui': ^1.0.10
 
   viteDocs:
     specifiers:
-      hzlzh-ui: ^1.0.8
+      '@hzlzh/ui': ^1.0.10
       sass: ^1.62.1
       vitepress: 1.0.0-beta.1
     devDependencies:
-      hzlzh-ui: link:..
       sass: 1.62.1
       vitepress: 1.0.0-beta.1_sass@1.62.1
 
@@ -468,13 +465,6 @@ packages:
     dependencies:
       '@babel/types': 7.22.4
     dev: true
-
-  /@babel/parser/7.22.5:
-    resolution: {integrity: sha512-DFZMC9LJUG9PLOclRC32G63UXwzqS2koQC8dkx+PLdmt1xSePYpbT/NbsrJy8Q/muXz7o/h/d4A7Fuyixm559Q==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.22.11
 
   /@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.22.5_@babel+core@7.22.11:
     resolution: {integrity: sha512-NP1M5Rf+u2Gw9qfSO4ihjcTGW5zXTi36ITLd4/EoAcEhIZ0yjMqmftDNl3QC19CX7olhrjpyU454g/2W7X0jvQ==}
@@ -2376,14 +2366,14 @@ packages:
   /@vue/compiler-sfc/3.3.4:
     resolution: {integrity: sha512-6y/d8uw+5TkCuzBkgLS0v3lSM3hJDntFEiUORM11pQ/hKvkhSKZrXW6i69UyXlJQisJxuUEJKAWEqWbWsLeNKQ==}
     dependencies:
-      '@babel/parser': 7.22.5
+      '@babel/parser': 7.22.11
       '@vue/compiler-core': 3.3.4
       '@vue/compiler-dom': 3.3.4
       '@vue/compiler-ssr': 3.3.4
       '@vue/reactivity-transform': 3.3.4
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
-      magic-string: 0.30.0
+      magic-string: 0.30.3
       postcss: 8.4.24
       source-map-js: 1.0.2
 
@@ -3662,6 +3652,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
 
   /magic-string/0.30.3:
     resolution: {integrity: sha512-B7xGbll2fG/VjP+SWg4sX3JynwIU0mjoTc6MPpKNuIvftk6u6vqhDnk1R80b8C2GBR6ywqy+1DcKBrevBg+bmw==}

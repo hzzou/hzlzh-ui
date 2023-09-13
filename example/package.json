@@ -9,6 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "hzlzh-ui": "^1.0.10"
+    "@hzlzh/ui": "^1.0.10"
   }
 }

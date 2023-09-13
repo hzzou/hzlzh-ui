@@ -1,10 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import "hzlzh-ui/style.css"
-import hzlzhUI from "hzlzh-ui";
+import { createApp } from "vue";
+import App from "./App.vue";
 
 const app = createApp(App);
-// 全局引入
-// app.use(hzlzhUI);
-app.mount('#app');
+
+
+app.mount("#app");
 
