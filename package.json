@@ -1,6 +1,6 @@
 {
   "name": "hzlzh-ui",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "type": "module",
   "description": "个人自定义vue3组件库",
   "main": "./lib/cjs/index.cjs",
