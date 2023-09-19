@@ -1,0 +1,26 @@
+
+$-color-primary: rgba(64, 158, 255, 1) !default;
+$-color-white: rgba(255, 255, 255, 1) !default;
+$-color-black: rgba(0, 0, 0, 1) !default;
+
+$-color-primary-light-1: mix($-color-white, $-color-primary, 10%);
+$-color-primary-light-2: mix($-color-white, $-color-primary, 20%);
+$-color-primary-light-3: mix($-color-white, $-color-primary, 30%);
+$-color-primary-light-4: mix($-color-white, $-color-primary, 40%);
+$-color-primary-light-5: mix($-color-white, $-color-primary, 50%);
+$-color-primary-light-6: mix($-color-white, $-color-primary, 60%);
+$-color-primary-light-7: mix($-color-white, $-color-primary, 70%);
+$-color-primary-light-8: mix($-color-white, $-color-primary, 80%);
+$-color-primary-light-9: mix($-color-white, $-color-primary, 90%);
+
+$-color-success: rgba(103, 194, 58, 1);
+$-color-warning: rgba(230, 162, 60, 1);
+$-color-danger: rgb(245, 108, 108, 1);
+
+$-color-success-light: mix($-color-white, $-color-success, 80%);
+$-color-waring-light: mix($-color-white, $-color-warning, 80%);
+$-color-danger-light: mix($-color-white, $-color-danger, 80%);
+
+$-color-success-lighter: mix($-color-white, $-color-success, 90%);
+$-color-waring-lighter: mix($-color-white, $-color-warning, 90%);
+$-color-danger-lighter: mix($-color-white, $-color-danger, 90%);

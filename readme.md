@@ -27,3 +27,5 @@ pnpm i hzlzh-ui
 * 测试文件夹名只要带有test名字，不管放在哪里都可以被找到
 * 在packages下单独再建一个package.json导出组件引用,方便example和viteDocs下安装引用，pnpm link @hzlzh/ui
 * 全局的package.json的exports就统一使用打包后的lib，方便发包
+* exports的文件配置路径决定了导出对应文件的路径
+* 使用vitepress-theme-demoblock作为文档demo展示插件

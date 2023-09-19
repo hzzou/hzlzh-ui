@@ -35,7 +35,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "scroll"[], "scroll", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     itemHeight: {
         type: NumberConstructor;
         default: number;
@@ -72,7 +72,10 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-}>>, {
+}>> & {
+    onScroll?: (...args: any[]) => any;
+}, {
+    align: string;
     height: number;
     itemHeight: number;
     showHeader: boolean;
@@ -81,6 +84,5 @@ declare const _sfc_main: import("vue").DefineComponent<{
     fixHead: boolean;
     style: Record<string, any>;
     headerAlign: string;
-    align: string;
 }, {}>;
 export default _sfc_main;

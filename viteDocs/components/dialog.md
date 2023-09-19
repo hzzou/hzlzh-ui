@@ -1,57 +1,21 @@
 
 # **Dialog 弹窗**
-::: tip
+::: tip 说明
 在保留当前页面状态的情况下，告知用户并承载相关操作
 :::
 
-##
-<hz-button type="primary" @click="showModal = true">展示弹窗</hz-button>
-<hz-dialog v-model="showModal" title="标题">
-    <template #default>
-            内容
-    </template>
-    <template #footer>
-        <hz-button @click="showModal = false">取消</hz-button>
-        <hz-button type="primary" @click="showModal = false">确定</hz-button>
-    </template>
-</hz-dialog>
+## **基本用法**
+::: preview
+demo-preview=../demo/dialog/base.vue
+:::
 
-<script lang="ts" setup>
-import { ref } from "vue";
-
-const showModal = ref(false);
-</script>
-<style lang="scss">
-    .hz-dialog .footer{
-        .hz-button{
-            margin-left: 10px;
-        }
-    }
-</style>
-```vue
-<template>
-    <hz-button type="primary" @click="showModal = true">展示弹窗</hz-button>
-    <hz-dialog v-model="showModal" title="2121">
-        <template #default>
-            内容
-        </template>
-        <template #footer>
-            <hz-button @click="showModal = false">取消</hz-button>
-            <hz-button type="primary" @click="showModal = false">确定</hz-button>
-        </template>
-    </hz-dialog>
-</template>
-<script lang="ts" setup>
-import { ref } from "vue";
-
-const showModal = ref(false);
-</script>
-```
 <style>
-@import url("../common/style.scss");
+@import url("../css/style.scss");
 </style>
+
 ## **Dialog API**
 ### **Dialog Attributes**
+
 | 属性名                 | 说明   | 类型            | 默认值   |
 |---------------------|------|---------------|-------|
 | model-value/v-model | 绑定的值 | Boolean       | false |

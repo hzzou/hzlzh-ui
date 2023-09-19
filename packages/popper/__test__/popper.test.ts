@@ -35,6 +35,7 @@ describe("测试popper组件", ()=>{
         // top-end
         await popper.trigger("mouseenter");
         const content = popper.find(".hz-content");
+        // 行内样式才可以用attributes获取
         const style_1 = popper.find(".tip").attributes("style");
 
         expect(content.isVisible()).toBeTruthy();

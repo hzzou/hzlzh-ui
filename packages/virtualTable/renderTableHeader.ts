@@ -8,7 +8,7 @@ export default defineComponent({
         // 头部
         const thHead = headKey.map((item, idx)=>{
             return h("li", {
-                key: idx+Math.random(),
+                key: idx,
                 class: "th",
                 style: {
                     width: (1 / headKey.length) * 100 + "%",

@@ -5,12 +5,15 @@ import Popper from "./popper";
 import Icon from "./icon";
 import VirtualTable from "./virtualTable";
 
+// 布局
+import {Row} from "./layout";
 
 import { App } from "vue";
 
 // 添加组件前缀(全局引入时使用)
 const prefix = "hz-";
 const components = [
+    {name: prefix+"row", value: Row},
 	{name: prefix+"button", value: Button},
 	{name: prefix+"input", value: Input},
 	{name: prefix+"dialog", value: Dialog},
@@ -21,6 +24,7 @@ const components = [
 
 // 作单独引入或者配套插件自动引入
 export {
+    Row,
 	Button,
 	Input,
 	Dialog,

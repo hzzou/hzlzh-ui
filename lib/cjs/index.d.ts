@@ -4,8 +4,9 @@ import Dialog from "./dialog";
 import Popper from "./popper";
 import Icon from "./icon";
 import VirtualTable from "./virtualTable";
+import { Row } from "./layout";
 import { App } from "vue";
-export { Button, Input, Dialog, Popper, Icon, VirtualTable };
+export { Row, Button, Input, Dialog, Popper, Icon, VirtualTable };
 declare const _default: {
     install(app: App): void;
 };

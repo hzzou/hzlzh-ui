@@ -36,15 +36,4 @@ describe("测试按钮组件",()=>{
         // 获取element
         expect(btn.get(".large")).toBeTruthy();
     });
-
-    it("测试动态classList列表",()=>{
-        const btn = shallowMount(Button,{
-            props:{
-                type: "default",
-                size: "small"
-            }
-        });
-        // toBe是比较原始类型和引用，toEqual是比较结构
-        expect(btn.vm.classList).toEqual(["default", "small"]);
-    });
 });

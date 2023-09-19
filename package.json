@@ -13,14 +13,14 @@
   "scripts": {
     "build": "rimraf lib && vite build",
     "eslint": "eslint packages/**/** --fix",
-    "test": "vitest virtualTable",
-    "coverave": "vitest virtualTable run --coverage"
+    "test": "vitest input",
+    "coverave": "vitest input run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.47"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.2.47"
   },
   "publishConfig": {
     "access": "public"
@@ -30,7 +30,6 @@
       "import": "./lib/es/index.js",
       "require": "./lib/cjs/index.cjs"
     },
-    "./style.css": "./lib/es/style.css",
     "./lib/es/style.css": "./lib/es/style.css"
   },
   "devDependencies": {

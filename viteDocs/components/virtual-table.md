@@ -1,50 +1,18 @@
 
 # **VirtualTable 虚拟表格**
-:::tip
-虚拟表格，主要用于数据量过多的渲染
+:::tip 说明
+虚拟表格，主要用于数据量过多的渲染,只渲染表格可视区
 :::
 
-##
-<hz-virtual-table @scroll="handleScroll" align="center" headerAlign="center" :table-data="tableData"></hz-virtual-table>
+## **基本用法**
+::: preview
+demo-preview=../demo/virtualTable/base.vue
+:::
 
-<script lang="ts" setup>
-    const tableData = [], len = 10000;
-    for(let i = 0; i < len; i++){
-      tableData.push({
-          name: "name_"+(i+1),
-          date: "date_"+(i+1),
-          address: "adddress_"+(i+1),
-          state: "state_"+(i+1)
-      });
-    };
-
-    const handleScroll = (data)=>{
-        console.log(data);
-    };
-</script>
-
-```vue
-<hz-virtual-table @scroll="handleScroll" align="center" headerAlign="center" :table-data="tableData"></hz-virtual-table>
-<script lang="ts" setup>
-    const tableData = [], len = 10000;
-    for(let i = 0; i < len; i++) {
-      tableData.push({
-        name: 'name_' + (i + 1),
-        date: 'date_' + (i + 1),
-        address: 'adddress_' + (i + 1),
-        state: 'state_' + (i + 1)
-      });
-    }
-
-    const handleScroll = (data)=>{
-        console.log(data);
-    };
-}
-</script>
-```
 <style>
-@import "../common/style.scss";
+@import "../css/style.scss";
 </style>
+
 ## **VirtualTable API**
 ### **VirtualTable Attributes**
 | 属性名         | 说明              | 类型      | 默认值   |

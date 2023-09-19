@@ -1,28 +1,45 @@
 
 # **Button 按钮**
-::: tip
+::: tip 说明
 常用的操作按钮
 :::
 
-##
-<hz-button type="primary" size="large" >hzlzh</hz-button>
+## **基础用法**
+::: preview 基础的按钮用法 || 使用type、plain、round和circle属性来定义Button的样式
+demo-preview=../demo/button/base.vue
+:::
 
-```vue
-<template>
-    <hz-button size="large" type="primary"></hz-button>
-</template>
-```
+## **禁用状态**
+::: preview 按钮不可用状态 || 使用disabled属性来定义按钮是否可用,接受一个Boolean值
+demo-preview=../demo/button/disabled.vue
+:::
+
+## **图标按钮**
+::: preview  || 传入icon-name属性即可,参考icon组件的name属性
+demo-preview=../demo/button/icon.vue
+:::
+
+## **加载中**
+::: preview 点击按钮后进行数据加载，按钮显示加载中的状态 || 只需设置loading属性为true即可
+demo-preview=../demo/button/load.vue
+:::
+
+## **不同尺寸**
+::: preview 默认尺寸是medium，还有small和large || 通过size属性设置
+demo-preview=../demo/button/size.vue
+:::
+
 <style>
-@import url("../common/style.scss");
+@import url("../css/style.scss");
 </style>
+
 ## **Button API**
 ### **Button Attributes**
 
-| 属性名  | 说明   | 类型     | 默认值                                                                                                                                                                             |
-|------|------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name | 按钮名字 | String | 按钮                                                                                                                                                                              |
-| size | 按钮大小 | String | default <hz-popper width="160" place="bottom-start"><hz-icon name="help" color="#999" size="20"></hz-icon><template v-slot:content>small, default, large</template></hz-popper> |
-| type | 按钮类型 | String | default <hz-popper width="160" place="bottom-start"><hz-icon name="help" color="#999" size="20"></hz-icon><template v-slot:content>default, primary</template></hz-popper>      |
+| 属性名  | 说明   | 类型     | 默认值     | 可选值                                        |
+|------|------|--------|---------|--------------------------------------------|
+| size | 按钮大小 | String | medium  | small, default, large                      |
+| type | 按钮类型 | String | default | default, primary, success, warning, danger |
 
 ### **Button Events**
 | 名称    | 说明   | 类型       |

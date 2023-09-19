@@ -1,3 +1,7 @@
+/**
+ * 当要透传某些原生属性时，如果没定义在props上, 则就是在$attrs上;
+ * 原生属性也可以写在API上
+ */
 declare const _sfc_main: import("vue").DefineComponent<{
     modelValue: {
         type: (StringConstructor | NumberConstructor)[];
@@ -7,27 +11,47 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    min: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    size: {
+        type: StringConstructor;
+        default: string;
     };
-    max: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    resize: {
+        type: StringConstructor;
+        default: string;
     };
-    step: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    disabled: {
+        type: BooleanConstructor;
+        default: boolean;
     };
-    maxLength: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    autofocus: {
+        type: BooleanConstructor;
+        default: boolean;
     };
-    minLength: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    readonly: {
+        type: BooleanConstructor;
+        default: boolean;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    autocomplete: {
+        type: StringConstructor;
+        default: string;
+    };
+    prefixIcon: {
+        type: StringConstructor;
+        default: string;
+    };
+    suffixIcon: {
+        type: StringConstructor;
+        default: string;
+    };
+    clearable: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    placeholder: {
+        type: StringConstructor;
+        default: string;
+    };
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "focus" | "blur")[], "update:modelValue" | "focus" | "blur", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
         type: (StringConstructor | NumberConstructor)[];
         default: string;
@@ -36,35 +60,62 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    min: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    size: {
+        type: StringConstructor;
+        default: string;
     };
-    max: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    resize: {
+        type: StringConstructor;
+        default: string;
     };
-    step: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    disabled: {
+        type: BooleanConstructor;
+        default: boolean;
     };
-    maxLength: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    autofocus: {
+        type: BooleanConstructor;
+        default: boolean;
     };
-    minLength: {
-        type: (StringConstructor | NumberConstructor)[];
-        default: number;
+    readonly: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    autocomplete: {
+        type: StringConstructor;
+        default: string;
+    };
+    prefixIcon: {
+        type: StringConstructor;
+        default: string;
+    };
+    suffixIcon: {
+        type: StringConstructor;
+        default: string;
+    };
+    clearable: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    placeholder: {
+        type: StringConstructor;
+        default: string;
     };
 }>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
+    onFocus?: (...args: any[]) => any;
+    onBlur?: (...args: any[]) => any;
 }, {
     type: string;
+    size: string;
+    disabled: boolean;
     modelValue: string | number;
-    min: string | number;
-    max: string | number;
-    step: string | number;
-    maxLength: string | number;
-    minLength: string | number;
+    resize: string;
+    autofocus: boolean;
+    readonly: boolean;
+    autocomplete: string;
+    prefixIcon: string;
+    suffixIcon: string;
+    clearable: boolean;
+    placeholder: string;
 }, {}>;
 export default _sfc_main;

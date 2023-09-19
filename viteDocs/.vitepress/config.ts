@@ -1,8 +1,12 @@
 import { defineConfig } from 'vitepress'
 import path from "node:path"
+//import demoblock from "vitepress-theme-demoblock";
 
-// https://vitepress.dev/reference/site-config
+import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
+
 export default defineConfig({
+    base: "/hzlzh-ui/",
+    outDir:  path.resolve(__dirname+"../../../docs"),
     title: "hzlzh-ui",
     description: "hzlzh-ui组件库文档说明",
     themeConfig:{
@@ -12,12 +16,12 @@ export default defineConfig({
                 text: '导航',
                 items:[
                     {text: "介绍", link: "/"},
-                    {text: "Button", link: "/components/button"},
-                    {text: "Dialog", link: "/components/dialog"},
-                    {text: "Input", link: "/components/input"},
-                    {text: "Icon", link: "/components/icon"},
-                    {text: "Popper", link: "/components/popper"},
-                    {text: "VirtualTable", link: "/components/virtual-table"},
+                    {text: "Button按钮", link: "/components/button"},
+                    {text: "Input输入框", link: "/components/input"},
+                    {text: "Dialog弹框", link: "/components/dialog"},
+                    {text: "Icon图标", link: "/components/icon"},
+                    {text: "Popper气泡卡片", link: "/components/popper"},
+                    {text: "VirtualTable虚拟表格", link: "/components/virtual-table"},
                 ]
             }
         ],
@@ -38,8 +42,21 @@ export default defineConfig({
         aside: false,
     },
     markdown:{
+        lineNumbers: true,
         config: (md) => {
+            // md.use(demoblock, {
+            //     scriptReplaces: [
+            //         { searchValue: /import ({.*}) from "vue"/g,
+            //             replaceValue: (s, s1) => `const ${s1} = Vue`
+            //         }
+            //     ]
+            // })
 
+            md.use(containerPreview)
+            md.use(componentPreview)
         }
+    },
+    build:{
+
     }
 })

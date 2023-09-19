@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev --port 1234",
     "docs:build": "vitepress build",
@@ -13,7 +14,10 @@
   "license": "ISC",
   "devDependencies": {
     "@hzlzh/ui": "^1.0.10",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.2",
     "sass": "^1.62.1",
-    "vitepress": "1.0.0-beta.1"
+    "vitepress": "1.0.0-beta.3",
+    "vitepress-theme-demoblock": "2"
   }
 }
