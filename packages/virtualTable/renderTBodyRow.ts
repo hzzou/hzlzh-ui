@@ -7,9 +7,9 @@ export default defineComponent({
         const {stripe, item, itemHeight, align} = context.$attrs;
 
         const listItem = Object.keys(item.data),
-            list = listItem.map((ele, idx)=>{
+            list = listItem.map((ele)=>{
             return h("li", {
-                key: idx,
+                key: ele,
                 class: "td",
                 style: {
                     width: (1 / listItem.length) * 100 + "%",

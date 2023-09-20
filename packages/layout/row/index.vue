@@ -25,12 +25,12 @@
             const {tag, gutter, justify, align} = context.$props;
 
             const slotList = context.$slots.default(),
-                  slotEle = slotList.map((ele, idx)=>{
+                  slotEle = slotList.map((ele)=>{
                       return h(ele,{
-                          key: idx,
+                          key: ele,
                           style: {
-                              marginLeft: `${gutter/2}px`,
-                              marginRight: `${gutter/2}px`,
+                              paddingLeft: `${gutter/2}px`,
+                              paddingRight: `${gutter/2}px`,
                           }
                       });
                   });

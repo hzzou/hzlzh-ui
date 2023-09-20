@@ -1642,8 +1642,11 @@
         cursor: default;
         border: 1px solid #dedede;
         margin: 0 !important;
-        .name,.code-name {
+        .name {
             color: #666;
+        }
+        .code-name{
+            display: none;
         }
     }
     .icon {

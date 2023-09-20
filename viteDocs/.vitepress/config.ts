@@ -29,6 +29,7 @@ export default defineConfig({
         nav:[
             { text: "介绍", link: "/"},
             { text: "组件", link: "/components/button"},
+            { text: "个人简历", link: "components/profile"}
         ],
         // 脚步导航
         docFooter: {
