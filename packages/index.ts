@@ -6,7 +6,7 @@ import Icon from "./icon";
 import VirtualTable from "./virtualTable";
 
 // 布局
-import {Row} from "./layout";
+import {Row, Col} from "./layout";
 
 import { App } from "vue";
 
@@ -14,6 +14,7 @@ import { App } from "vue";
 const prefix = "hz-";
 const components = [
     {name: prefix+"row", value: Row},
+    {name: prefix+"col", value: Col},
 	{name: prefix+"button", value: Button},
 	{name: prefix+"input", value: Input},
 	{name: prefix+"dialog", value: Dialog},
@@ -25,6 +26,7 @@ const components = [
 // 作单独引入或者配套插件自动引入
 export {
     Row,
+    Col,
 	Button,
 	Input,
 	Dialog,

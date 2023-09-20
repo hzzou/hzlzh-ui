@@ -24,7 +24,7 @@ demo-preview=../demo/icon/base.vue
 | size  | 大小  | String,Number | 16     |
 
 ### **name的可选值**
-::: preview  || 不带icon- 前缀
+::: preview
 demo-preview=../demo/icon/name.vue
 :::
 
