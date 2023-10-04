@@ -42,9 +42,9 @@ demo-preview=../demo/button/size.vue
 | type | 按钮类型 | String | default | default, primary, success, warning, danger |
 
 ### **Button Events**
-| 名称    | 说明   | 类型       |
-|-------|------|----------|
-| click | 点击事件 | Function |
+| 名称    | 说明   | 类型       | 参数    |
+|-------|------|----------|-------|
+| click | 点击事件 | Function | event |
 
 ### **Button Slots**
 | 插槽名称    | 说明      |

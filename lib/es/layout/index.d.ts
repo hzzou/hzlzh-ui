@@ -1,2 +1,3 @@
 import Row from "./row/index.vue";
-export { Row };
+import Col from "./col/index.vue";
+export { Row, Col };

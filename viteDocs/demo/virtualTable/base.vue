@@ -1,6 +1,6 @@
 <template>
     <div>
-        <hz-virtual-table @scroll="handleScroll" align="center" headerAlign="center" :table-data="tableData"></hz-virtual-table>
+        <hz-virtual-table align="center" headerAlign="center" :table-data="tableData"></hz-virtual-table>
     </div>
 </template>
 <script setup>
@@ -13,8 +13,4 @@
             state: "state_"+(i+1)
         });
     }
-
-    const handleScroll = (data)=>{
-        console.log(data);
-    };
 </script>

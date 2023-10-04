@@ -25,10 +25,10 @@ demo-preview=../demo/dialog/base.vue
 | height              | 弹窗高度 | String,Number | ''    |
 
 ### **Dialog Events**
-| 名称    | 说明          | 类型       |
-|-------|-------------|----------|
-| open  | 打开Dialog的会掉 | Function |
-| close | 关闭Dialog的会掉 | Function |
+| 名称    | 说明          | 类型       | 参数            |
+|-------|-------------|----------|---------------|
+| open  | 打开Dialog的会掉 | Function | {show: true}  |
+| close | 关闭Dialog的会掉 | Function | {show: false} |
 
 ### **Dialog Slots**
 | 插槽名称    | 说明                          |

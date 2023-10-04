@@ -3,11 +3,13 @@
         <article class="table"
              @scroll="handleScroll"
              :style="{height: height+'px'}">
-            <RenderTableHeader v-if="showHeader" v-bind="{headKey, itemHeight, headerAlign, fixHead}" />
+            <RenderTableHeader @headerSelect="handleAllSelect" v-if="showHeader" v-bind="{headKey, itemHeight,
+             headerAlign, fixHead, openSelect, multiSelect, checkHeader, selected, itemCount}" />
             <section class="tbody" :style="{height: showHeader ? (height - itemHeight)+'px' : height+'px'}">
                 <div v-if="itemData.length" >
                     <template v-for="item in itemData" :key="item.index">
-                        <RenderTBodyRow v-bind="{item, stripe, itemHeight, align}" />
+                        <RenderTBodyRow @select="handleSelect" v-bind="{item, stripe, itemHeight, align,
+                        openSelect, multiSelect, currentIdx, selected}" />
                     </template>
                 </div>
                 <div v-else class="default">
@@ -21,6 +23,7 @@
     import { onBeforeMount, ref } from "vue";
     import RenderTableHeader from "./renderTableHeader";
     import RenderTBodyRow from "./renderTBodyRow";
+    import { useCurrentIdx, useSelected, useSelectedItem } from "./hooks";
 
     const props = defineProps({
         itemHeight: {
@@ -60,16 +63,28 @@
         align: {
             type: String,
             default: "left"
+        },
+        openSelect: {
+            type: Boolean,
+            default: false
+        },
+        multiSelect: {
+            type: Boolean,
+            default: false
         }
     });
 
+    let scrollOffset = ref(0), // 滚动距离
+        itemCount = ref(0), // 所有行数
+        checkHeader = ref(false), // 单选表头勾选
+        headKey =  ref([]), // 表头字段
+        itemData = ref([]); // 可视区数据
 
-    let scrollOffset = ref(0),
-        itemCount = ref(0),
-        headKey =  ref([]),
-        itemData = ref([]);
+    const [currentIdx, setCurrentIdx] = useCurrentIdx(),
+          [selected, setSelected] = useSelected(),
+          [selectedItem, setSelectedItem] = useSelectedItem();
 
-    const emitEvent = defineEmits(["scroll"]);
+    const emitEvent = defineEmits(["scroll","check"]);
 
     // 刚进来时调用一次
     onBeforeMount(()=>{
@@ -79,6 +94,39 @@
         }
         getClientChildren();
     });
+
+    // 头部选择, 设置表头input的半选和全选
+    const handleAllSelect = ()=>{
+        if(props.multiSelect){
+            const arr = selected.value.length > 0 ? [] : props.tableData.map((ele, idx)=>idx);
+            const itemArr = selectedItem.value.length > 0 ? [] : props.tableData;
+            setSelected(arr);
+            setSelectedItem(itemArr);
+            emitEvent("check", itemArr);
+        }
+        else{
+            if(checkHeader.value && currentIdx.value !== -1){
+                checkHeader.value = false;
+                setCurrentIdx(-1);
+                emitEvent("check", {});
+            }
+        }
+    };
+
+    // 表格上勾选
+    const handleSelect = (item)=>{
+        console.log(item);
+        if(props.multiSelect){
+            setSelected(item.index);
+            setSelectedItem(item.data);
+            props.openSelect && emitEvent("check", selectedItem);
+        }else{
+            const idx = currentIdx.value === item.index ? -1 : item.index;
+            checkHeader.value = true;
+            setCurrentIdx(idx);
+            props.openSelect && emitEvent("check", item.data);
+        }
+    };
 
     // 获取距离顶部的滚动距离
     // 滚动事件不能添加到tbody,会影响fixHead固定头部的设置

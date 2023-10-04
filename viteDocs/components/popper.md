@@ -22,10 +22,10 @@ demo-preview=../demo/popper/base.vue
 | title | 标题   | String         | ""     |                                                                                                                      |
 
 ### **Popper Events**
-| 名称   | 说明    | 类型       |
-|------|-------|----------|
-| show | 显示时触发 | Function |
-| hide | 隐藏时触发 | Function |
+| 名称   | 说明    | 类型       | 参数                          |
+|------|-------|----------|-----------------------------|
+| show | 显示时触发 | Function | { show: true, event: event} |
+| hide | 隐藏时触发 | Function | { hide: true, event: event} |
 
 ### **Popper Slots**
 | 插槽名称    | 说明        |

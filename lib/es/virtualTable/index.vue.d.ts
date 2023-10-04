@@ -35,7 +35,15 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "scroll"[], "scroll", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    openSelect: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    multiSelect: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("scroll" | "check")[], "scroll" | "check", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     itemHeight: {
         type: NumberConstructor;
         default: number;
@@ -72,8 +80,17 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    openSelect: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    multiSelect: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
 }>> & {
     onScroll?: (...args: any[]) => any;
+    onCheck?: (...args: any[]) => any;
 }, {
     align: string;
     height: number;
@@ -84,5 +101,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     fixHead: boolean;
     style: Record<string, any>;
     headerAlign: string;
+    openSelect: boolean;
+    multiSelect: boolean;
 }, {}>;
 export default _sfc_main;

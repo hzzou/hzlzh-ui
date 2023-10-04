@@ -1,8 +1,9 @@
 <template>
     <div class="app">
 <!--        <Button></Button>-->
-        <Input></Input>
-        <Profile />
+<!--        <Input></Input>-->
+<!--        <Profile />-->
+        <VirtualTable></VirtualTable>
     </div>
 </template>
 <script setup lang="ts">

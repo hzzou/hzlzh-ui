@@ -29,3 +29,4 @@ pnpm i hzlzh-ui
 * 全局的package.json的exports就统一使用打包后的lib，方便发包
 * exports的文件配置路径决定了导出对应文件的路径
 * 使用vitepress-theme-demoblock作为文档demo展示插件
+* test命令配置只带测试,coverage命令配置除了带测试还带报告输出
