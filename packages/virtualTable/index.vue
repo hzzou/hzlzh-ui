@@ -115,7 +115,6 @@
 
     // 表格上勾选
     const handleSelect = (item)=>{
-        console.log(item);
         if(props.multiSelect){
             setSelected(item.index);
             setSelectedItem(item.data);

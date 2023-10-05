@@ -19,6 +19,11 @@ demo-preview=../demo/input/disabled.vue
 demo-preview=../demo/input/clear.vue
 :::
 
+## **密码显隐**
+::: preview  || 使用show-password属性即可得到一个可控制显隐的密码框
+demo-preview=../demo/input/password.vue
+:::
+
 ## **带icon的输入框**
 ::: preview  带有图标标记输入类型
 demo-preview=../demo/input/icon.vue

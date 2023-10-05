@@ -1,9 +1,10 @@
 <template>
     <div class="app">
 <!--        <Button></Button>-->
-<!--        <Input></Input>-->
+        <Input></Input>
 <!--        <Profile />-->
-        <VirtualTable></VirtualTable>
+<!--        <VirtualTable></VirtualTable>-->
+        <Popper></Popper>
     </div>
 </template>
 <script setup lang="ts">

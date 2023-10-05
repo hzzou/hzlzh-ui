@@ -15,7 +15,7 @@
                 </span>
                 <section :class="['input-wrap',{
                     'hz-input-prefix': $slots.prefix || prefixIcon,
-                    'hz-input-suffix': $slots.suffix || suffixIcon || clearable,
+                    'hz-input-suffix': $slots.suffix || suffixIcon || clearable || showPassword,
                     'is-disabled': disabled
                 }]" :style="{
                     borderTopLeftRadius: $slots.prepend ? 0 : null,
@@ -29,7 +29,7 @@
                         <Icon :name="prefixIcon" v-else-if="prefixIcon"></Icon>
                     </span>
                     <input
-                        :type="type"
+                        :type="showPassword ? passWord ? 'password' : 'text' :type"
                         :value="modelValue"
                         :autofocus="autofocus"
                         :readonly="readonly"
@@ -39,12 +39,18 @@
                         v-bind="$attrs"
                         @focus="handleFocus"
                         @blur="handleBlur"
-                        @input="handleInput"  />
+                        @input="handleInput"
+                        @change="handleChange"
+                    />
                     <!--后缀图标, 三个只能有一个存在-->
-                    <span class="input-suffix" v-if="$slots.suffix || suffixIcon || showClear">
+                    <span class="input-suffix" v-if="$slots.suffix || suffixIcon || showClear || showPassword">
                         <span class="suffix" v-if="$slots.suffix"><slot name="suffix"></slot></span>
                         <Icon :name="suffixIcon" v-else-if="suffixIcon"></Icon>
                         <Icon name="close-bold" v-else-if="showClear" @click.stop="handleClear"></Icon>
+                        <span v-else-if="showPassword">
+                            <Icon name="browse" v-if="passWord" @click.stop="passWord = false"></Icon>
+                            <Icon name="hide" v-else @click.stop="passWord = true"></Icon>
+                        </span>
                     </span>
                 </section>
 
@@ -54,7 +60,18 @@
                 </span>
             </section>
         </template>
-
+        <template v-else>
+            <textarea
+                :value="modelValue"
+                :cols="cols"
+                :rows="rows"
+                @input="handleInput"
+                @focus="handleFocus"
+                @blur="handleBlur"
+                @change="handleChange"
+                v-bind="$attrs"
+            ></textarea>
+        </template>
     </div>
 </template>
 <script lang="ts" name="hz-input" setup>
@@ -114,13 +131,26 @@
         placeholder: {
             type: String,
             default: "请输入"
+        },
+        showPassword: {
+            type: Boolean,
+            default: false
+        },
+        cols: {
+            type: Number,
+            default: 20
+        },
+        rows: {
+            type: Number,
+            default: 5
         }
     });
 
 
     const isFocus = ref(false),
           isHover = ref(false),
-          focusColor = ref("rgba(64, 158, 255, 1)");
+          focusColor = ref("rgba(64, 158, 255, 1)"),
+          passWord = ref(true); // 控制密码显隐
 
     // 显示清除按钮的条件
     // 传递显示clearable, 不只读，不disabled, input框有值, focus或者hover
@@ -129,7 +159,7 @@
     });
 
     // 全局指令v-model vue官方定义的emit是update:modelValue
-    const emitEvent = defineEmits(["update:modelValue", "focus", "blur"]);
+    const emitEvent = defineEmits(["update:modelValue", "focus", "blur", "change"]);
 
     // 更新value
     const handleInput = (e) => {
@@ -151,14 +181,22 @@
         emitEvent("update:modelValue", "");
     };
 
+    // 输入框失去焦点时的值
+    const handleChange = (e)=>{
+        emitEvent("change", e.target.value);
+    };
+
+
 </script>
 
 <style lang="scss" scoped>
     .hz-input{
         display: inline-block;
         input{
+            width: 100%;
             border: none;
             outline: none;
+            box-sizing: border-box;
             font-size: 20px;
             &:disabled{
                 cursor: not-allowed;

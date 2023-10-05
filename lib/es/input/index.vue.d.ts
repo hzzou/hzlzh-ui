@@ -51,7 +51,19 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "focus" | "blur")[], "update:modelValue" | "focus" | "blur", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    showPassword: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    cols: {
+        type: NumberConstructor;
+        default: number;
+    };
+    rows: {
+        type: NumberConstructor;
+        default: number;
+    };
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "focus" | "blur" | "change")[], "update:modelValue" | "focus" | "blur" | "change", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
         type: (StringConstructor | NumberConstructor)[];
         default: string;
@@ -100,10 +112,23 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    showPassword: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    cols: {
+        type: NumberConstructor;
+        default: number;
+    };
+    rows: {
+        type: NumberConstructor;
+        default: number;
+    };
 }>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
     onFocus?: (...args: any[]) => any;
     onBlur?: (...args: any[]) => any;
+    onChange?: (...args: any[]) => any;
 }, {
     type: string;
     size: string;
@@ -117,5 +142,8 @@ declare const _sfc_main: import("vue").DefineComponent<{
     suffixIcon: string;
     clearable: boolean;
     placeholder: string;
+    showPassword: boolean;
+    cols: number;
+    rows: number;
 }, {}>;
 export default _sfc_main;

@@ -1,6 +1,8 @@
 ### 使用
 pnpm i hzlzh-ui
 
+* 如果是使用module形式，请记得在全局main.ts入口引入css文件: import "hzlzh-ui/lib/es/style.css"
+
 ### 个人自定义VUE3组件库(个人学习)
 
 * 开发模式的时候, "exports"的导出口使用开发packages路径下的出口

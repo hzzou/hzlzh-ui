@@ -7,7 +7,7 @@ import hzlzhUI from "@hzlzh/ui";
 //import DemoBlock from "vitepress-theme-demoblock/dist/client/components/DemoBlock.vue";
 
 // 另一个demo插件
-import { NaiveUIContainer } from '@vitepress-demo-preview/component';
+import { NaiveUIContainer, } from '@vitepress-demo-preview/component';
 import '@vitepress-demo-preview/component/dist/style.css';
 import "../../css/base.scss"; // 重置某些样式
 

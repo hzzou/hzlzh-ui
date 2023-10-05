@@ -1,22 +1,34 @@
 <template>
     <div>
         <hz-row gutter="10" align="center">
-            <div>属性方式:</div>
-            <hz-input v-model="input1" prefixIcon="user"></hz-input>
-            <hz-input v-model="input2" suffixIcon="search"></hz-input>
+            <hz-col span="4">
+                <div>属性方式:</div>
+            </hz-col>
+            <hz-col span="10">
+                <hz-input v-model="input1" prefixIcon="user"></hz-input>
+            </hz-col>
+            <hz-col span="10">
+                <hz-input v-model="input2" suffixIcon="search"></hz-input>
+            </hz-col>
         </hz-row>
         <hz-row gutter="10" align="center">
-            <div>slot方式:</div>
-            <hz-input v-model="input3">
-                <template #prefix>
-                    <hz-icon name="search"></hz-icon>
-                </template>
-            </hz-input>
-            <hz-input v-model="input4">
-                <template #suffix>
-                    <hz-icon name="user"></hz-icon>
-                </template>
-            </hz-input>
+            <hz-col span="4">
+                <div>slot方式:</div>
+            </hz-col>
+            <hz-col span="10">
+                <hz-input v-model="input3">
+                    <template #prefix>
+                        <hz-icon name="search"></hz-icon>
+                    </template>
+                </hz-input>
+            </hz-col>
+            <hz-col span="10">
+                <hz-input v-model="input4">
+                    <template #suffix>
+                        <hz-icon name="user"></hz-icon>
+                    </template>
+                </hz-input>
+            </hz-col>
         </hz-row>
     </div>
 </template>

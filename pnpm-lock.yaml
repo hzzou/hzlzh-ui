@@ -67,9 +67,9 @@ importers:
   viteDocs:
     specifiers:
       '@hzlzh/ui': ^1.0.10
-      '@vitepress-demo-preview/component': ^2.3.2
-      '@vitepress-demo-preview/plugin': ^1.2.2
-      sass: ^1.62.1
+      '@vitepress-demo-preview/component': 2.3.2
+      '@vitepress-demo-preview/plugin': 1.2.2
+      sass: 1.62.1
       vitepress: 1.0.0-beta.3
       vitepress-theme-demoblock: '2'
     devDependencies:

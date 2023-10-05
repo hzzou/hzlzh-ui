@@ -26,8 +26,8 @@
 
             const slotList = context.$slots.default(),
                   slotEle = slotList.map((ele)=>{
+                      // 此处props上设置key导致元素不能复用,所以每次输入一下导致失焦重新渲染一次
                       return h(ele,{
-                          key: ele,
                           style: {
                               paddingLeft: `${gutter/2}px`,
                               paddingRight: `${gutter/2}px`,
