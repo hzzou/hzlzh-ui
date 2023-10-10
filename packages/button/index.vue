@@ -71,6 +71,7 @@
 </script>
 
 <style scoped lang="scss">
+    @import "../../assets/common/css/var.scss";
     .hz-button{
         @keyframes loading-rotate {
             100% {
@@ -124,83 +125,83 @@
                     color: #333 !important;
                 }
                 &:hover,&.loading{
-                    background: rgba(64, 158, 255, 0.1);
-                    color: rgba(64, 158, 255, 1);
-                    border-color: rgba(64, 158, 255, 0.3);
+                    background: $-color-primary-light-1;
+                    color: $-color-primary;
+                    border-color: $-color-primary-light-3;
                 }
             }
             &.primary{
-                background: rgba(64, 158, 255, 1);
+                background: $-color-primary;
                 color: #fff;
                 .hz-icon{
                     color: #fff !important;
                 }
                 &:hover,&.loading {
-                    background: rgba(64, 158, 255, 0.8);
+                    background: $-color-primary-light-8;
                 }
 
                 &.plain{
-                    background: rgba(64, 158, 255, 0.1);
-                    color: rgba(64, 158, 255, 1);
+                    background: $-color-primary-light-1;
+                    color: $-color-primary;
                     &:hover,&.loading {
-                        background: rgba(64, 158, 255, 1);
+                        background: $-color-primary;
                         color: #fff;
                     }
                 }
             }
             &.success{
-                background: rgba(103, 194, 58, 1);
+                background: $-color-success;
                 color: #fff;
                 .hz-icon{
                     color: #fff !important;
                 }
                 &:hover,&.loading {
-                    background: rgba(103, 194, 58, 0.8);
+                    background: $-color-success-light-8;
                 }
 
                 &.plain{
-                    background: rgba(103, 194, 58, 0.1);
-                    color: rgba(103, 194, 58, 1);
+                    background: $-color-success-light-1;
+                    color: $-color-success;
                     &:hover,&.loading {
-                        background: rgba(103, 194, 58, 1);
+                        background: $-color-success;
                         color: #fff;
                     }
                 }
             }
             &.warning{
-                background: rgba(230, 162, 60, 1);
+                background: $-color-warning;
                 color: #fff;
                 .hz-icon{
                     color: #fff !important;
                 }
                 &:hover,&.loading {
-                    background: rgba(230, 162, 60, 0.8);
+                    background: $-color-waring-light-8;
                 }
 
                 &.plain{
-                    background: rgba(230, 162, 60, 0.1);
-                    color: rgba(230, 162, 60, 1);
+                    background: $-color-waring-light-1;
+                    color: $-color-warning;
                     &:hover,&.loading {
-                        background: rgba(230, 162, 60, 1);
+                        background: $-color-warning;
                         color: #fff;
                     }
                 }
             }
             &.danger{
-                background: rgb(245, 108, 108, 1);
+                background: $-color-danger;
                 color: #fff;
                 .hz-icon{
                     color: #fff !important;
                 }
                 &:hover {
-                    background: rgba(245, 108, 108, 0.8);
+                    background: $-color-danger-light-8;
                 }
 
                 &.plain{
-                    background: rgba(245, 108, 108, 0.1);
-                    color: rgba(245, 108, 108, 1);
+                    background: $-color-danger-light-1;
+                    color: $-color-danger;
                     &:hover,&.loading {
-                        background: rgba(245, 108, 108, 1);
+                        background: $-color-danger;
                         color: #fff;
                     }
                 }

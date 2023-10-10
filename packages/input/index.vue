@@ -62,6 +62,7 @@
         </template>
         <template v-else>
             <textarea
+                :style="{resize: resize}"
                 :value="modelValue"
                 :cols="cols"
                 :rows="rows"
@@ -71,6 +72,7 @@
                 @change="handleChange"
                 v-bind="$attrs"
             ></textarea>
+
         </template>
     </div>
 </template>
@@ -96,9 +98,9 @@
             type: String,
             default: "medium"
         },
-        resize: {
+        resize: { // textarea的拉伸控制
             type: String,
-            default: "both"
+            default: "none"
         },
         disabled: {
             type: Boolean,
@@ -138,11 +140,11 @@
         },
         cols: {
             type: Number,
-            default: 20
+            default: 30
         },
         rows: {
             type: Number,
-            default: 5
+            default: 2
         }
     });
 
@@ -197,7 +199,6 @@
             border: none;
             outline: none;
             box-sizing: border-box;
-            font-size: 20px;
             &:disabled{
                 cursor: not-allowed;
             }
@@ -261,6 +262,7 @@
         &.small{
             input{
                 padding: 2px 2px 2px 5px;
+                font-size: 16px;
             }
             .input-prepend, .input-append{
                 padding: 8px 5px;
@@ -269,6 +271,7 @@
         &.medium{
             input{
                 padding: 8px 4px;
+                font-size: 18px;
             }
             .input-prepend, .input-append{
                 padding: 10px 5px;
@@ -277,10 +280,17 @@
         &.large{
             input{
                 padding: 12px 8px 12px 12px;
+                font-size: 20px;
             }
             .input-prepend, .input-append{
                 padding: 12px 5px;
             }
+        }
+    }
+    .hz-textarea{
+        & > textarea{
+            min-width: 200px;
+            min-height: 30px;
         }
     }
 </style>

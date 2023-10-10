@@ -45,6 +45,7 @@ export default defineComponent({
                         indeterminate: selected.length > 0 && selected.length < itemCount ? true : false,
                         ref: inputRef,
                         onClick: ()=>{
+                            // 多选点击表头取消选中时避免选中
                             if(selected.length > 0 && selected.length < itemCount){
                                 inputRef.value.checked = false;
                             }

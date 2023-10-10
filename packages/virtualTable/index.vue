@@ -121,9 +121,10 @@
             props.openSelect && emitEvent("check", selectedItem);
         }else{
             const idx = currentIdx.value === item.index ? -1 : item.index;
-            checkHeader.value = true;
+            // 单选要选中表头
+            checkHeader.value = idx > -1 ? true : false;
             setCurrentIdx(idx);
-            props.openSelect && emitEvent("check", item.data);
+            props.openSelect && emitEvent("check", checkHeader.value ? item.data : {});
         }
     };
 
