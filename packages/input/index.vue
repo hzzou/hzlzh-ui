@@ -16,7 +16,7 @@
                 <section :class="['input-wrap',{
                     'hz-input-prefix': $slots.prefix || prefixIcon,
                     'hz-input-suffix': $slots.suffix || suffixIcon || clearable || showPassword,
-                    'is-disabled': disabled
+                    'is-disabled': $attrs.disabled
                 }]" :style="{
                     borderTopLeftRadius: $slots.prepend ? 0 : null,
                     borderBottomLeftRadius: $slots.prepend ? 0 : null,
@@ -31,10 +31,6 @@
                     <input
                         :type="showPassword ? passWord ? 'password' : 'text' :type"
                         :value="modelValue"
-                        :autofocus="autofocus"
-                        :readonly="readonly"
-                        :disabled="disabled"
-                        :autocomplete="autocomplete"
                         :placeholder="placeholder"
                         v-bind="$attrs"
                         @focus="handleFocus"
@@ -72,19 +68,19 @@
                 @change="handleChange"
                 v-bind="$attrs"
             ></textarea>
-
         </template>
+        <span v-if="wordVisible" class="word-limit">{{modelValue.length+'/'+$attrs.maxlength}}</span>
     </div>
 </template>
 <script lang="ts" name="hz-input" setup>
-    import { computed, ref } from "vue";
+    import { computed, ref, useAttrs } from "vue";
     import Icon from "../icon";
 
     /**
      * 当要透传某些原生属性时，如果没定义在props上, 则就是在$attrs上;
      * 原生属性也可以写在API上
      */
-    // 全局指令v-model vue官方定义的props是modelValue
+    // 全局指令v-model vue官方定义的props是modelValue, 触发了原生input事件
     const props = defineProps({
         modelValue: {
             type: [String, Number],
@@ -100,23 +96,7 @@
         },
         resize: { // textarea的拉伸控制
             type: String,
-            default: "none"
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-        autofocus: {
-            type: Boolean,
-            default: false
-        },
-        readonly: {
-            type: Boolean,
-            default: false
-        },
-        autocomplete: {
-            type: String,
-            default: "off"
+            default: "both"
         },
         prefixIcon: {
             type: String,
@@ -127,6 +107,10 @@
             default: ""
         },
         clearable: {
+            type: Boolean,
+            default: false
+        },
+        showWordLimit: {
             type: Boolean,
             default: false
         },
@@ -144,12 +128,13 @@
         },
         rows: {
             type: Number,
-            default: 2
+            default: 5
         }
     });
 
 
-    const isFocus = ref(false),
+    const attrs = useAttrs(), // 使用$attrs传递的属性
+          isFocus = ref(false),
           isHover = ref(false),
           focusColor = ref("rgba(64, 158, 255, 1)"),
           passWord = ref(true); // 控制密码显隐
@@ -157,11 +142,17 @@
     // 显示清除按钮的条件
     // 传递显示clearable, 不只读，不disabled, input框有值, focus或者hover
     const showClear = computed(()=>{
-        return props.clearable && !props.readonly && !props.disabled && props.modelValue && (isFocus.value || isHover.value);
+        return props.clearable && !attrs.readonly && !attrs.disabled && props.modelValue && (isFocus.value || isHover.value);
+    });
+
+    // 显示限制文字个数的条件
+    // 只在text和textarea类型时，不只读时, 不disabled, 不是密码显隐时,
+    const wordVisible = computed(()=>{
+        return (props.type === "text" || props.type === "textarea") && !attrs.readonly && !attrs.disabled && !props.showPassword && props.showWordLimit && attrs.maxlength;
     });
 
     // 全局指令v-model vue官方定义的emit是update:modelValue
-    const emitEvent = defineEmits(["update:modelValue", "focus", "blur", "change"]);
+    const emitEvent = defineEmits(["update:modelValue", "focus", "blur", "change", "clear"]);
 
     // 更新value
     const handleInput = (e) => {
@@ -179,8 +170,9 @@
     };
 
     // 清空input
-    const handleClear = () => {
+    const handleClear = (e) => {
         emitEvent("update:modelValue", "");
+        emitEvent("clear", e);
     };
 
     // 输入框失去焦点时的值
@@ -192,7 +184,18 @@
 </script>
 
 <style lang="scss" scoped>
+    @mixin word(){
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 14px;
+        color: #999;
+    }
     .hz-input{
+        position: relative;
+        .word-limit{
+            @include word;
+        }
         display: inline-block;
         input{
             width: 100%;
@@ -288,9 +291,9 @@
         }
     }
     .hz-textarea{
-        & > textarea{
-            min-width: 200px;
-            min-height: 30px;
+        position: relative;
+        .word-limit{
+            @include word;
         }
     }
 </style>

@@ -19,22 +19,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    disabled: {
-        type: BooleanConstructor;
-        default: boolean;
-    };
-    autofocus: {
-        type: BooleanConstructor;
-        default: boolean;
-    };
-    readonly: {
-        type: BooleanConstructor;
-        default: boolean;
-    };
-    autocomplete: {
-        type: StringConstructor;
-        default: string;
-    };
     prefixIcon: {
         type: StringConstructor;
         default: string;
@@ -44,6 +28,10 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: string;
     };
     clearable: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    showWordLimit: {
         type: BooleanConstructor;
         default: boolean;
     };
@@ -63,7 +51,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: NumberConstructor;
         default: number;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "focus" | "blur" | "change")[], "update:modelValue" | "focus" | "blur" | "change", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "focus" | "blur" | "change" | "clear")[], "update:modelValue" | "focus" | "blur" | "change" | "clear", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
         type: (StringConstructor | NumberConstructor)[];
         default: string;
@@ -80,22 +68,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    disabled: {
-        type: BooleanConstructor;
-        default: boolean;
-    };
-    autofocus: {
-        type: BooleanConstructor;
-        default: boolean;
-    };
-    readonly: {
-        type: BooleanConstructor;
-        default: boolean;
-    };
-    autocomplete: {
-        type: StringConstructor;
-        default: string;
-    };
     prefixIcon: {
         type: StringConstructor;
         default: string;
@@ -105,6 +77,10 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: string;
     };
     clearable: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    showWordLimit: {
         type: BooleanConstructor;
         default: boolean;
     };
@@ -129,18 +105,16 @@ declare const _sfc_main: import("vue").DefineComponent<{
     onFocus?: (...args: any[]) => any;
     onBlur?: (...args: any[]) => any;
     onChange?: (...args: any[]) => any;
+    onClear?: (...args: any[]) => any;
 }, {
     type: string;
     size: string;
-    disabled: boolean;
     modelValue: string | number;
     resize: string;
-    autofocus: boolean;
-    readonly: boolean;
-    autocomplete: string;
     prefixIcon: string;
     suffixIcon: string;
     clearable: boolean;
+    showWordLimit: boolean;
     placeholder: string;
     showPassword: boolean;
     cols: number;

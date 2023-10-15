@@ -4,6 +4,7 @@ import Dialog from "./dialog";
 import Popper from "./popper";
 import Icon from "./icon";
 import VirtualTable from "./virtualTable";
+import VirtualSelect from "./VirtualSelect";
 
 // 布局
 import {Row, Col} from "./layout";
@@ -21,6 +22,7 @@ const components = [
 	{name: prefix+"popper", value: Popper},
 	{name: prefix+"icon", value: Icon},
 	{name: prefix+"virtual-table", value: VirtualTable},
+	{name: prefix+"virtual-select", value: VirtualSelect},
 ];
 
 // 作单独引入或者配套插件自动引入
@@ -32,7 +34,8 @@ export {
 	Dialog,
 	Popper,
 	Icon,
-    VirtualTable
+    VirtualTable,
+    VirtualSelect
 };
 
 // 使用app.use的方式全局注册

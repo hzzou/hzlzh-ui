@@ -5,7 +5,7 @@
                 <div>属性方式:</div>
             </hz-col>
             <hz-col span="10">
-                <hz-input v-model="input1" prefixIcon="user"></hz-input>
+                <hz-input v-model="input1" prefix-icon="user"></hz-input>
             </hz-col>
             <hz-col span="10">
                 <hz-input v-model="input2" suffixIcon="search"></hz-input>

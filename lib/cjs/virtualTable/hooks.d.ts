@@ -1,3 +1,14 @@
-export declare const useCurrentIdx: () => (import("vue").Ref<number> | ((index: any) => void))[];
-export declare const useSelected: () => (import("vue").Ref<any[]> | ((data: any) => void))[];
-export declare const useSelectedItem: () => (import("vue").Ref<any[]> | ((item: any) => void))[];
+import { Ref } from "vue";
+import VirTableSpace from "./interface";
+export declare const useCurrentIdx: () => {
+    currentIdx: Ref<number>;
+    setCurrentIdx: (index: number) => void;
+};
+export declare const useSelected: () => {
+    selected: Ref<number[]>;
+    setSelected: (data: number[] | number) => void;
+};
+export declare const useSelectedItem: () => {
+    selectedItem: Ref<VirTableSpace.ItemObj[]>;
+    setSelectedItem: (item: VirTableSpace.ItemObj | VirTableSpace.ItemObj[]) => void;
+};

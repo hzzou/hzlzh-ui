@@ -20,10 +20,11 @@
     </div>
 </template>
 <script name="hz-virtual-table" setup lang="ts">
-    import { onBeforeMount, ref } from "vue";
+    import { onBeforeMount, Ref, ref } from "vue";
     import RenderTableHeader from "./renderTableHeader";
     import RenderTBodyRow from "./renderTBodyRow";
     import { useCurrentIdx, useSelected, useSelectedItem } from "./hooks";
+    import VirTableSpace from "./interface";
 
     const props = defineProps({
         itemHeight: {
@@ -78,11 +79,11 @@
         itemCount = ref(0), // 所有行数
         checkHeader = ref(false), // 单选表头勾选
         headKey =  ref([]), // 表头字段
-        itemData = ref([]); // 可视区数据
+        itemData: Ref<VirTableSpace.ItemObj[]> = ref([]); // 可视区数据
 
-    const [currentIdx, setCurrentIdx] = useCurrentIdx(),
-          [selected, setSelected] = useSelected(),
-          [selectedItem, setSelectedItem] = useSelectedItem();
+    const {currentIdx, setCurrentIdx} = useCurrentIdx(),
+          {selected, setSelected} = useSelected(),
+          {selectedItem, setSelectedItem} = useSelectedItem();
 
     const emitEvent = defineEmits(["scroll","check"]);
 
