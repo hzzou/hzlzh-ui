@@ -1,6 +1,6 @@
 <template>
     <div>
-      <hz-dialog v-model="showDialog" width="400px" height="500px" >
+      <hz-dialog @open="handleOpen" v-model="showDialog" width="400px" height="500px" >
             <template #header>
                 3223434
             </template>
@@ -18,6 +18,10 @@
     import { ref } from "vue";
 
     const showDialog = ref(false);
+
+    const handleOpen = (data)=>{
+        console.log(data);
+    };
 
 </script>
 

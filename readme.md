@@ -13,7 +13,7 @@ pnpm i hzlzh-ui
 * rimraf lib 可以删除文件夹lib
 * storybook组件说明文档工具需要项目有prettier才能安装成功
 * unplugin-vue-components 自动按需引入组件，不需要全局注册
-* 使用pnpm管理packages，在开发的调试的时候，example里面使用pnpm link hzlzh-ui时，库主目录下的main或则module可以换成开发库的出口，发布时换成打包之后的库文件夹出口,export中的配置同理
+* 使用pnpm管理packages，在开发调试的时候，example里面使用pnpm link hzlzh-ui时，库主目录下的main或则module可以换成开发库的出口，发布时换成打包之后的库文件夹出口,export中的配置同理
 * storybook独自输出meta没用，需要配套一个实例输出
 * script标签上name属性是配合storiesbook写说明文档时的模版展示和联动
 * 使用vitePress写说明文档和单独输出时不需要添加组件前缀
@@ -27,7 +27,7 @@ pnpm i hzlzh-ui
 * happy-dom是模拟dom,安装后在vite配置文件添加test下environment
 * @vitest/coverage-v8是测试覆盖率的, 需要添加对应测试命令
 * 测试文件夹名只要带有test名字，不管放在哪里都可以被找到
-* 在packages下单独再建一个package.json导出组件引用,方便example和viteDocs下安装引用，pnpm link @hzlzh/ui
+* 在packages下单独再建一个package.json导出组件引用,方便example和viteDocs下安装引用,这样开发和发包时就不用每次手动去更改全局package.json的exports,pnpm link @hzlzh/ui
 * 全局的package.json的exports就统一使用打包后的lib，方便发包
 * exports的文件配置路径决定了导出对应文件的路径
 * 使用vitepress-theme-demoblock作为文档demo展示插件

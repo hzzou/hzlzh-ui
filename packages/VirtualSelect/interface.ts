@@ -1,3 +1,5 @@
-namespace VirtualSelectSpace{
+namespace VirSelectSpace{
 
 }
+
+export default VirSelectSpace;

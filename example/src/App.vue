@@ -1,10 +1,11 @@
 <template>
     <div class="app">
 <!--        <Button></Button>-->
-        <Input></Input>
+<!--        <Input></Input>-->
 <!--        <Profile />-->
 <!--        <VirtualTable></VirtualTable>-->
-        <Popper></Popper>
+<!--        <Popper></Popper>-->
+        <Dialog></Dialog>
     </div>
 </template>
 <script setup lang="ts">

@@ -1,11 +1,11 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeAll } from "vitest";
 import { mount } from "@vue/test-utils";
 import Popper from "../index";
 
 
 describe("测试popper组件", ()=>{
     let popper;
-    beforeEach(()=>{
+    beforeAll(()=>{
         popper = mount(Popper, {
             slots: {
                 default: "<div style='height: 30px;'>默认slot</div>",

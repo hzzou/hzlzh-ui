@@ -13,8 +13,8 @@
   "scripts": {
     "build": "rimraf lib && vite build",
     "eslint": "eslint packages/**/** --fix",
-    "test": "vitest virtualTable",
-    "coverave": "vitest virtualTable run --coverage"
+    "test": "vitest dialog",
+    "coverave": "vitest dialog run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.47"

@@ -1,7 +1,7 @@
 <template>
     <div v-if="modelValue" class="hz-dialog" @click="hideDialog" >
         <div v-if="modal" :class="{'hz-modal': modal}">
-            <div class="hz-content" @click.stop :style="{width, height}" >
+            <div class="hz-content" @click.stop :style="{width: width+'px', height: height+'px'}" >
                 <div class="header">
                     <slot name="header">{{title}}</slot>
                     <Icon class="close" name="close" @click.stop="hideDialog" />
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div v-else class="hz-wrap" @click.stop>
-            <div class="hz-content" :style="{width, height}" >
+            <div class="hz-content" :style="{width: width+'px', height: height+'px'}" >
                 <div class="header">
                     <slot name="header">{{title}}</slot>
                     <Icon class="close" name="close" @click.stop="hideDialog" />
@@ -55,6 +55,7 @@
             default: ""
         }
     });
+
     // 事件
     const emitEvent = defineEmits(["open", "close", "update:modelValue"]);
 
