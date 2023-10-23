@@ -22,6 +22,7 @@ export default defineConfig({
                     {text: "Icon图标", link: "/components/icon"},
                     {text: "Popper气泡卡片", link: "/components/popper"},
                     {text: "VirtualTable虚拟表格", link: "/components/virtual-table"},
+                    {text: "VirtualSelect虚拟选择器", link: "/components/virtual-select"}
                 ]
             }
         ],

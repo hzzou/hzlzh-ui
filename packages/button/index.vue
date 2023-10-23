@@ -120,7 +120,7 @@
             // 按钮类型
             &.default{
                 border:1px solid #ddd;
-                background: #fff;
+                background: $-color-white;
                 .hz-icon{
                     color: #333 !important;
                 }
@@ -132,9 +132,9 @@
             }
             &.primary{
                 background: $-color-primary;
-                color: #fff;
+                color: $-color-white;
                 .hz-icon{
-                    color: #fff !important;
+                    color: $-color-white !important;
                 }
                 &:hover,&.loading {
                     background: $-color-primary-light-8;
@@ -145,15 +145,15 @@
                     color: $-color-primary;
                     &:hover,&.loading {
                         background: $-color-primary;
-                        color: #fff;
+                        color: $-color-white;
                     }
                 }
             }
             &.success{
                 background: $-color-success;
-                color: #fff;
+                color: $-color-white;
                 .hz-icon{
-                    color: #fff !important;
+                    color: $-color-white !important;
                 }
                 &:hover,&.loading {
                     background: $-color-success-light-8;
@@ -164,15 +164,15 @@
                     color: $-color-success;
                     &:hover,&.loading {
                         background: $-color-success;
-                        color: #fff;
+                        color: $-color-white;
                     }
                 }
             }
             &.warning{
                 background: $-color-warning;
-                color: #fff;
+                color: $-color-white;
                 .hz-icon{
-                    color: #fff !important;
+                    color: $-color-white !important;
                 }
                 &:hover,&.loading {
                     background: $-color-waring-light-8;
@@ -183,15 +183,15 @@
                     color: $-color-warning;
                     &:hover,&.loading {
                         background: $-color-warning;
-                        color: #fff;
+                        color: $-color-white;
                     }
                 }
             }
             &.danger{
                 background: $-color-danger;
-                color: #fff;
+                color: $-color-white;
                 .hz-icon{
-                    color: #fff !important;
+                    color: $-color-white !important;
                 }
                 &:hover {
                     background: $-color-danger-light-8;
@@ -202,7 +202,7 @@
                     color: $-color-danger;
                     &:hover,&.loading {
                         background: $-color-danger;
-                        color: #fff;
+                        color: $-color-white;
                     }
                 }
             }

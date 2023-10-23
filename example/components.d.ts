@@ -14,6 +14,8 @@ declare module 'vue' {
     HzInput: typeof import('@hzlzh/ui')['Input']
     HzPopper: typeof import('@hzlzh/ui')['Popper']
     HzRow: typeof import('@hzlzh/ui')['Row']
+    HzSelect: typeof import('@hzlzh/ui')['Select']
+    HzVirtualSelect: typeof import('@hzlzh/ui')['VirtualSelect']
     HzVirtualTable: typeof import('@hzlzh/ui')['VirtualTable']
   }
 }

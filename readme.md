@@ -32,3 +32,5 @@ pnpm i hzlzh-ui
 * exports的文件配置路径决定了导出对应文件的路径
 * 使用vitepress-theme-demoblock作为文档demo展示插件
 * test命令配置只带测试,coverage命令配置除了带测试还带报告输出
+* withDefault使用的interface不能声明在单独文件里面，若不使用withDefault则可以,并且可以用namespace
+* 事件不管用自定义还是vue3自己的默认带on，当前使用@绑定时省略on，当在props中时带on驼峰写法

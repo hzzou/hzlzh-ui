@@ -1,23 +1,23 @@
 {
-  "hash": "22601271",
-  "browserHash": "77a53e10",
+  "hash": "63bd0266",
+  "browserHash": "c19b1233",
   "optimized": {
     "vue": {
-      "src": "../../../../node_modules/.pnpm/vue@3.3.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "aaa7e0c7",
+      "fileHash": "1bec6d17",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
       "src": "../../../../node_modules/.pnpm/@vitepress-demo-preview+component@2.3.2_vitepress@1.0.0-beta.3/node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "6b0c4017",
+      "fileHash": "f944e4f0",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-NQEDJL6T": {
-      "file": "chunk-NQEDJL6T.js"
+    "chunk-CVDJ62DI": {
+      "file": "chunk-CVDJ62DI.js"
     }
   }
 }

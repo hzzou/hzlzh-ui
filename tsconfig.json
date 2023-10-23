@@ -15,6 +15,10 @@
     "declaration": true,
     "baseUrl": "./",
   },
-  "include": ["./packages/**/*.ts", "./packages/**/*.d.ts", "./packages/**/*.vue"],
+  "include": [
+    "./*.d.ts",
+    "./packages/**/*.ts",
+    "./packages/**/*.d.ts",
+    "./packages/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json"}]
 }

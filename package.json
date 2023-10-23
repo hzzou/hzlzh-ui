@@ -12,12 +12,12 @@
   },
   "scripts": {
     "build": "rimraf lib && vite build",
-    "eslint": "eslint packages/**/** --fix",
-    "test": "vitest dialog",
-    "coverave": "vitest dialog run --coverage"
+    "eslint": "eslint packages/* --fix",
+    "test": "vitest virtualSelect",
+    "coverave": "vitest virtualTable run --coverage"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "vue": "3.2.47"
   },
   "peerDependencies": {
     "vue": "^3.2.47"
@@ -33,27 +33,27 @@
     "./lib/es/style.css": "./lib/es/style.css"
   },
   "devDependencies": {
-    "@rollup/plugin-legacy": "^2.2.0",
-    "@types/node": "^20.2.5",
-    "@typescript-eslint/eslint-plugin": "^5.59.9",
-    "@typescript-eslint/parser": "^5.59.9",
-    "@vitejs/plugin-legacy": "^4.1.1",
-    "@vitejs/plugin-vue": "^4.1.0",
-    "@vitest/coverage-v8": "^0.34.3",
-    "@vue/test-utils": "^2.4.1",
+    "@rollup/plugin-legacy": "2.2.0",
+    "@types/node": "20.2.5",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
+    "@vitejs/plugin-legacy": "4.1.1",
+    "@vitejs/plugin-vue": "4.1.0",
+    "@vitest/coverage-v8": "0.34.3",
+    "@vue/test-utils": "2.4.1",
     "eslint": "8.0.0",
-    "eslint-plugin-vue": "^9.14.1",
-    "happy-dom": "^10.11.2",
-    "rollup": "^3.28.1",
-    "sass": "^1.62.1",
-    "terser": "^5.19.2",
+    "eslint-plugin-vue": "9.14.1",
+    "happy-dom": "10.11.2",
+    "rollup": "3.28.1",
+    "sass": "1.62.1",
+    "terser": "5.19.2",
     "typescript": "5.0.2",
-    "unplugin-vue-components": "^0.25.1",
-    "vite": "^4.0.0",
-    "vite-plugin-dts": "^2.3.0",
-    "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vitest": "^0.34.3",
-    "vue-tsc": "^1.4.2"
+    "unplugin-vue-components": "0.25.1",
+    "vite": "4.0.0",
+    "vite-plugin-dts": "2.3.0",
+    "vite-plugin-vue-setup-extend": "0.4.0",
+    "vitest": "0.34.3",
+    "vue-tsc": "1.4.2"
   },
   "workspaces": [
     "packages/*",

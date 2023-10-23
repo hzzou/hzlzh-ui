@@ -43,35 +43,40 @@ describe("测试virtualTable组件", ()=>{
     });
 
     it("测试单选", async ()=>{
+        const handleScroll = vi.fn(ev=>console.log("table:",ev));
         const table = await mount(VirtualTable, {
             props: {
                 tableData: data,
                 openSelect: true,
+                onScroll: (event)=>{
+                    handleScroll(event);
+                }
             }
         });
 
         // 测试滑动
         await table.find(".table").trigger("scroll");
+        expect(handleScroll).toBeCalled();
 
         const tr = table.findAll(".tr");
 
         // 选中第三行
         await tr[3].trigger("click");
-        expect(table.vm.currentIdx).toEqual(2);
+        expect(table.vm!.currentIdx).toEqual(2);
 
         // 表头取消选中
         await tr[0].trigger("click");
-        expect(table.vm.currentIdx).toEqual(-1);
+        expect(table.vm!.currentIdx).toEqual(-1);
 
         // 测试点击行的checkbox
         const checkbox = table.findAll(".checkbox");
 
         await checkbox[5].trigger("click");
-        expect(table.vm.currentIdx).toEqual(4);
+        expect(table.vm!.currentIdx).toEqual(4);
 
         // 表头取消选中
         await checkbox[0].trigger("click");
-        expect(table.vm.currentIdx).toEqual(-1);
+        expect(table.vm!.currentIdx).toEqual(-1);
     });
 
     it("测试多选", async ()=>{
@@ -91,11 +96,11 @@ describe("测试virtualTable组件", ()=>{
         await tr[3].trigger("click");
         await tr[4].trigger("click");
         await tr[5].trigger("click");
-        expect(table.vm.selected.length).toEqual(3);
+        expect(table.vm!.selected.length).toEqual(3);
 
         // 测试表头取消多选
         await tr[0].trigger("click");
-        expect(table.vm.selected.length).toEqual(0);
+        expect(table.vm!.selected.length).toEqual(0);
 
         // 测试点击行的checkbox
         const checkbox = table.findAll(".checkbox");
@@ -104,20 +109,20 @@ describe("测试virtualTable组件", ()=>{
         await checkbox[4].trigger("click");
         await checkbox[5].trigger("click");
         await checkbox[6].trigger("click");
-        expect(table.vm.selected.length).toEqual(4);
+        expect(table.vm!.selected.length).toEqual(4);
 
         // 测试表头取消多选
         await checkbox[0].trigger("click");
-        expect(table.vm.selected.length).toEqual(0);
+        expect(table.vm!.selected.length).toEqual(0);
 
         // 测试表头全选
         await checkbox[0].trigger("click");
-        expect(table.vm.selected.length).toEqual(table.vm.itemCount);
+        expect(table.vm!.selected.length).toEqual(table.vm!.itemCount);
         await checkbox[0].trigger("click"); // 取消全选,避免影响下次
 
         // 触发表头
         const thead = table.find(".thead");
         await thead.trigger("click");
-        expect(table.vm.selected.length).toEqual(table.vm.itemCount);
+        expect(table.vm!.selected.length).toEqual(table.vm!.itemCount);
     });
 });

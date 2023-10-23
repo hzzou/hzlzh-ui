@@ -5,7 +5,8 @@
 <!--        <Profile />-->
 <!--        <VirtualTable></VirtualTable>-->
 <!--        <Popper></Popper>-->
-        <Dialog></Dialog>
+<!--        <Dialog></Dialog>-->
+      <VirtualSelect></VirtualSelect>
     </div>
 </template>
 <script setup lang="ts">
@@ -15,7 +16,7 @@
     import Popper from "./popper/index.vue";
     import VirtualTable from "./virtualTable/index.vue";
     import Profile from "../../viteDocs/demo/profile.vue";
-
+    import VirtualSelect from  "./virtualSelect/index.vue";
     // let m = 100_123_234_223;
     // console.log(m)
 

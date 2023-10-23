@@ -8,10 +8,10 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
+  "devDependencies": {
+    "sass": "1.62.1"
+  },
   "dependencies": {
     "@hzlzh/ui": "^1.0.10"
-  },
-  "devDependencies": {
-    "sass": "^1.62.1"
   }
 }
