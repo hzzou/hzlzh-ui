@@ -48,11 +48,11 @@
         },
         width: {
             type: [String, Number],
-            default: ""
+            default: "500"
         },
         height: {
             type: [String, Number],
-            default: ""
+            default: "300"
         }
     });
 
@@ -94,6 +94,7 @@
             .hz-content{
                 background: #fff;
                 border-radius: 3px;
+                box-sizing: border-box;
                 box-shadow: 0 0 5px 2px #aaa;
                 width: 50%;
                 height: 50%;

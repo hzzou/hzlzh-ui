@@ -21,14 +21,14 @@ demo-preview=../demo/dialog/base.vue
 | model-value/v-model | 绑定的值 | Boolean       | false |
 | modal               | 弹窗蒙层 | Boolean       | true  |
 | title               | 弹窗标题 | String        | ''    |
-| width               | 弹窗宽度 | String,Number | ''    |
-| height              | 弹窗高度 | String,Number | ''    |
+| width               | 弹窗宽度 | String,Number | 500   |
+| height              | 弹窗高度 | String,Number | 300   |
 
 ### **Dialog Events**
 | 名称    | 说明          | 类型       | 参数            |
 |-------|-------------|----------|---------------|
-| open  | 打开Dialog的会掉 | Function | {show: true}  |
-| close | 关闭Dialog的会掉 | Function | {show: false} |
+| open  | 打开Dialog的回调 | Function | {show: true}  |
+| close | 关闭Dialog的回调 | Function | {show: false} |
 
 ### **Dialog Slots**
 | 插槽名称    | 说明                          |

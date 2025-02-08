@@ -21,14 +21,16 @@
 </template>
 <script name="hz-button" setup lang="ts">
     import Icon from "../icon";
+    import { PropType } from "vue";
 
+    type customType = "button" | "submit" | "reset";
     const props = defineProps({
         type: {
             type: String,
             default: "default"
         },
         nativeType: {
-            type: String,
+            type: String as PropType<customType>,
             default: "button"
         },
         size: {

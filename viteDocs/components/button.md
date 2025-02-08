@@ -36,10 +36,17 @@ demo-preview=../demo/button/size.vue
 ## **Button API**
 ### **Button Attributes**
 
-| 属性名  | 说明   | 类型     | 默认值     | 可选值                                        |
-|------|------|--------|---------|--------------------------------------------|
-| size | 按钮大小 | String | medium  | small, default, large                      |
-| type | 按钮类型 | String | default | default, primary, success, warning, danger |
+| 属性名         | 说明        | 类型      | 默认值     | 可选值                                        |
+|-------------|-----------|---------|---------|--------------------------------------------|
+| size        | 按钮大小      | String  | medium  | small, default, large                      |
+| type        | 按钮类型      | String  | default | default, primary, success, warning, danger |
+| native-type | 原生type属性  | String  | button  | button, submit, reset                      |
+| icon-name   | 图标组件的中文名  | String  | ""      | 看Icon组件的name值                              |
+| loading     | 是否为加载中状态  | Boolean | false   |                                            |
+| round       | 是否为圆角按钮   | Boolean | false   |                                            |
+| circle      | 是否为圆形按钮   | Boolean | false   |                                            |
+| plain       | 是否为朴素按钮   | Boolean | false   |                                            |
+| disabled    | 按钮是否为禁用状态 | Boolean | false   |                                            |
 
 ### **Button Events**
 | 名称    | 说明   | 类型       | 参数    |
